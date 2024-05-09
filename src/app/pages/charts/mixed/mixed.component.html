@@ -1,0 +1,48 @@
+<app-page-title [title]="'Mixed Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Line Column</h6>
+            <div id="lineColumnChart" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="lineChart.series" [chart]="lineChart.chart" [yaxis]="lineChart.yaxis" [xaxis]="lineChart.xaxis" [labels]="lineChart.labels" [stroke]="lineChart.stroke" [title]="lineChart.title" [dataLabels]="lineChart.dataLabels" [colors]="lineChart.colors"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Multiple Y-Axis</h6>
+            <div id="multipleYaxisChart" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="multipleYAxisChart.series" [chart]="multipleYAxisChart.chart" [xaxis]="multipleYAxisChart.xaxis" [stroke]="multipleYAxisChart.stroke" [yaxis]="multipleYAxisChart.yaxis" [dataLabels]="multipleYAxisChart.dataLabels" [title]="multipleYAxisChart.title" [tooltip]="multipleYAxisChart.tooltip" [legend]="multipleYAxisChart.legend" [colors]="multipleYAxisChart.colors"></apx-chart> 
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Line & Area</h6>
+            <div id="lineAreaChart" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="lineAreaChart.series" [chart]="lineAreaChart.chart" [xaxis]="lineAreaChart.xaxis" [labels]="lineAreaChart.labels" [stroke]="lineAreaChart.stroke" [markers]="lineAreaChart.markers" [tooltip]="lineAreaChart.tooltip" [colors]="lineAreaChart.colors">
+                </apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Line Column Area</h6>
+            <div id="lineColumnAreaChart" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="lineColumnAreaChart.series" [chart]="lineColumnAreaChart.chart" [yaxis]="lineColumnAreaChart.yaxis" [xaxis]="lineColumnAreaChart.xaxis" [labels]="lineColumnAreaChart.labels" [stroke]="lineColumnAreaChart.stroke" [plotOptions]="lineColumnAreaChart.plotOptions" [markers]="lineColumnAreaChart.markers" [fill]="lineColumnAreaChart.fill" [tooltip]="lineColumnAreaChart.tooltip" [colors]="lineColumnAreaChart.colors"></apx-chart>
+
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Line Scatter</h6>
+            <div id="lineScatterChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="linesctterChart.series" [chart]="linesctterChart.chart" [xaxis]="linesctterChart.xaxis" [fill]="linesctterChart.fill" [legend]="linesctterChart.legend" [markers]="linesctterChart.markers" [tooltip]="linesctterChart.tooltip" [colors]="linesctterChart.colors">
+                </apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

@@ -1,0 +1,28 @@
+<app-page-title [title]="'Pie / Donut Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="basicPolar" class="apex-charts"
+                dir="ltr">
+                <apx-chart class="apex-charts" [series]="basicPolarChart.series" [chart]="basicPolarChart.chart"
+                     [stroke]="basicPolarChart.stroke" [fill]="basicPolarChart.fill"
+                    [legend]="basicPolarChart.legend" [colors]="basicPolarChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Monochrome</h6>
+            <div id="monochromeChart" class="apex-charts"  dir="ltr">
+                <apx-chart class="apex-charts" [series]="monochromeChart.series" [chart]="monochromeChart.chart"
+                    [labels]="monochromeChart.labels"  [theme]="monochromeChart.theme"
+                    [fill]="monochromeChart.fill" [yaxis]="monochromeChart.yaxis" [stroke]="monochromeChart.stroke"
+                    [legend]="monochromeChart.legend" 
+                    [plotOptions]="monochromeChart.plotOptions" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

@@ -1,0 +1,43 @@
+{
+  "name": "ngx-slick-carousel",
+  "version": "17.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leo6104/ngx-slick-carousel"
+  },
+  "author": {
+    "name": "leo6104",
+    "email": "heo@mapiacompany.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leo6104/ngx-slick-carousel/issues"
+  },
+  "module": "fesm2022/ngx-slick-carousel.mjs",
+  "typings": "index.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "rxjs": "^7.0.0",
+    "zone.js": ">=0.10.2"
+  },
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/ngx-slick-carousel.mjs",
+      "esm": "./esm2022/ngx-slick-carousel.mjs",
+      "default": "./fesm2022/ngx-slick-carousel.mjs"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

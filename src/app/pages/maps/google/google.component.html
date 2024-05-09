@@ -1,0 +1,45 @@
+<app-page-title [title]="'Google Maps'" [pagetitle]="'Maps'"></app-page-title>
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Markers</h6>
+            <div id="gmaps-markers" class="gmaps">
+                <google-map [latitude]="latitude" [longitude]="longitude" [options]="mapOptions" [zoom]="15" width="100%" height="300px">
+                    <map-marker *ngFor="let marker of markers" [position]="marker.position"></map-marker>
+                </google-map>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Overlays</h6>
+            <div id="gmaps-overlay" class="gmaps">
+                <google-map height="300px" width="100%" >
+
+                </google-map>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Street View Panoramas</h6>
+            <div id="panorama" class="gmaps-panaroma">
+                <google-map height="300px" width="100%" >
+
+                </google-map>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Map Types</h6>
+            <div id="gmaps-types" class="gmaps">
+                <google-map height="300px" width="100%" >
+
+                </google-map>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

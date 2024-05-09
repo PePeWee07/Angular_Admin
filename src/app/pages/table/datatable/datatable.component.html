@@ -1,0 +1,32 @@
+<app-page-title [title]="'Datatable'" [pagetitle]="'Tables'"></app-page-title>
+
+<div class="px-4 py-3 mb-4 text-sm text-red-500 border border-transparent rounded-md bg-red-50 dark:bg-red-400/20">
+    This is <b>Datatable</b> page in which we have used <b>jQuery</b> with cdn link!
+</div>
+
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="mb-4 text-15">Basic</h6>
+        <ngx-datatable class="material" [limit]="17" [loadingIndicator]="true" [rows]="datatable" [columns]="columns" [columnMode]="'force'" [headerHeight]="42" [footerHeight]="50" [sorts]="[{ prop: 'productName', dir: 'desc' }]" rowHeight="auto" [rowHeight]="'auto'">
+            @for(column of columns;track $index){
+                <ngx-datatable-column name="{{column.name}}" prop="{{column.prop}}" headerClass="ltr:text-left rtl:text-right bg-slate-100 dark:bg-zink-600 px-3.5 py-2.5 font-semibold text-slate-500 border-b border-slate-200 dark:border-zink-500 dark:text-zink-200 sort" cellClass="px-3.5 py-2.5 border-t border-slate-200 dark:border-zink-500">
+                    <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+        }
+        <ngx-datatable-footer>
+            <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize" let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+                <div class="grow">
+                    <p class="text-slate-500 dark:text-zink-200">Showing <b>{{getEndIndex()}}</b> of <b>{{ totalItems }}</b> Results</p>
+                </div>
+                @if(totalItems > 0){
+                <pagination-controls [currentPage]="currentPage" previousLabel="Prev" [darkLinks]="true" nextLabel="Next" [itemsPerPage]="itemsPerPage" [total]="totalItems" (pageChanged)="onPageChange($event)">
+                </pagination-controls>
+                }
+            </ng-template>
+        </ngx-datatable-footer>
+        </ngx-datatable>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+<app-page-title [title]="'Swiper Slider'" [pagetitle]="'Plugins'"></app-page-title>
+
+<div class="px-4 py-3 mb-5 text-sm text-red-500 border border-transparent rounded-md bg-red-50 dark:bg-red-400/20">
+    The <a href="https://www.npmjs.com/package/ngx-slick-carousel" class="font-semibold underline" target="_blank">ngx-slick-carousel documentation</a> provides even more options and customization possibilities for creating engaging carousels. Remember to adjust image URLs and content according to your project.
+</div>
+
+<div class="grid grid-cols-1 gap-x-5 lg:grid-cols-2 2xl:grid-cols-3">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Default</h6>
+
+            <!-- Swiper -->
+            <ngx-slick-carousel class="swiper mySwiper" [config]="slideConfig">
+                <!-- <div class="swiper-wrapper"> -->
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-2.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-3.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-4.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-5.jpg" alt="">
+                </div>
+                <!-- </div> -->
+            </ngx-slick-carousel>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Navigation</h6>
+
+            <!-- Swiper -->
+            <ngx-slick-carousel class="swiper navigation-swiper custom-arrow" [config]="Navigation" #slickModal>
+                <!-- <div class="swiper-wrapper"> -->
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-6.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-7.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-8.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-9.jpg" alt="">
+                </div>
+                <!-- </div> -->
+            </ngx-slick-carousel>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Pagination</h6>
+
+            <!-- Swiper -->
+            <ngx-slick-carousel class="swiper pagination-slider" [config]="Pagination" id="Pagination">
+                <!-- <ngx-slick-carousel class="swiper-wrapper"> -->
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-6.jpg" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/small/img-7.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-8.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-9.jpg" alt="">
+                </div>
+                <!-- </ngx-slick-carousel> -->
+            </ngx-slick-carousel>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Pagination Dynamic</h6>
+
+            <!-- Swiper -->
+            <ngx-slick-carousel class="swiper pagination-dynamic" [config]="Pagination" id="Pagination">
+                <!-- <div class="swiper-wrapper"> -->
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-10.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-11.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-12.jpg" alt="">
+                </div>
+                <!-- </div> -->
+            </ngx-slick-carousel>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Vertical</h6>
+
+            <!-- Swiper -->
+            <ngx-slick-carousel class="swiper vertical-slider" style="height: 327px;" [config]="verticalConfig">
+                <!-- <div class="swiper-wrapper"> -->
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-1.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-2.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-3.jpg" alt="">
+                </div>
+                <!-- </div> -->
+            </ngx-slick-carousel>
+        </div>
+    </div><!--end card-->
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Pagination progress</h6>
+
+            <!-- Swiper -->
+            <ngx-slick-carousel class="swiper pagination-progress" (afterChange)="onSlide($event)" [config]="sliderConfig">
+                <!-- <div class="swiper-wrapper"> -->
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-4.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-5.jpg" alt="">
+                </div>
+                <div ngxSlickItem>
+                    <img src="assets/images/small/img-6.jpg" alt="">
+                </div>
+            </ngx-slick-carousel>
+
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

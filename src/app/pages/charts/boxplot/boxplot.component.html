@@ -1,0 +1,28 @@
+<app-page-title [title]="'Boxplot Charts'" [pagetitle]="'Apexcharts'" ></app-page-title>
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="basicBoxplot" class="apex-charts" dir="ltr">
+                <apx-chart [series]="basicBoxChart.series" [chart]="basicBoxChart.chart" [plotOptions]="basicBoxChart.plotOptions" [stroke]="basicBoxChart.stroke" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Boxplot-Scatter</h6>
+            <div id="boxplotScatterChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="scatterBoxChart.series" [chart]="scatterBoxChart.chart" [plotOptions]="scatterBoxChart.plotOptions" [stroke]="scatterBoxChart.stroke" [colors]="scatterBoxChart.colors" [xaxis]="scatterBoxChart.xaxis" [tooltip]="scatterBoxChart.tooltip" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Horizontal BoxPlot</h6>
+            <div id="boxplotHorizontalChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="horizontalBoxChart.series" [chart]="horizontalBoxChart.chart" [plotOptions]="horizontalBoxChart.plotOptions" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

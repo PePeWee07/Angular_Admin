@@ -1,0 +1,15 @@
+<ng-template [ngIf]="isOpen">
+  <i *ngIf="icon != ''" class="{{icon}} text-xl ltr:mr-2 rtl:ml-2"></i>
+  <ng-content></ng-content>
+  <ng-template [ngIf]="dismissible">
+    <button [ngClass]="closeButtonStyle" (click)="close($event)"><lucide-angular name="x" [class]="'h-5'"></lucide-angular></button>
+    <ng-container *ngIf="closeButtonText">
+      {{ closeButtonText }}
+    </ng-container>
+
+
+    <!-- <button *ngIf="!closeButtonStyle" class="absolute top-0 bottom-0 right-0 p-3 transition text-custom-200 hover:text-custom-500 dark:text-custom-400/50 dark:hover:text-custom-500"><lucide-angular name="variable" class="h-5"></lucide-angular></button> -->
+
+    <!-- <button *ngIf="!closeButtonStyle" class="alert-close ltr:ml-auto rtl:mr-auto text-violet-400 text-lg" > <lucide-angular name="variable" *ngIf="closeButtonIcon" [class]="closeButtonIcon" class="h-5"></lucide-angular></button> -->
+  </ng-template>
+</ng-template>

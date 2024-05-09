@@ -1,0 +1,21 @@
+<app-page-title [title]="'Funnel Charts'" [pagetitle]="'Apexcharts'" ></app-page-title>
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="basicFunnel" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="funnelbasicChart.series" [chart]="funnelbasicChart.chart" [dataLabels]="funnelbasicChart.dataLabels" [plotOptions]="funnelbasicChart.plotOptions" [xaxis]="funnelbasicChart.xaxis" [fill]="funnelbasicChart.fill" [colors]="funnelbasicChart.colors" [legend]="funnelbasicChart.legend" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Pyramid</h6>
+            <div id="pyramidChart" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="pyramidChart.series" [chart]="pyramidChart.chart" [dataLabels]="pyramidChart.dataLabels" [plotOptions]="pyramidChart.plotOptions" [xaxis]="pyramidChart.xaxis" [colors]="pyramidChart.colors" [legend]="pyramidChart.legend" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

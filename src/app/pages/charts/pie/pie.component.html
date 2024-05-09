@@ -1,0 +1,115 @@
+<app-page-title [title]="'Pie / Donut Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Simple Pie</h6>
+            <div id="simplePie" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="simplePieChart.series" [chart]="simplePieChart.chart"
+                [labels]="simplePieChart.labels" [legend]="simplePieChart.legend"
+                [colors]="simplePieChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Simple Donut</h6>
+            <div id="simpleDonut" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="simpleDonutChart.series" [chart]="simpleDonutChart.chart"
+                [legend]="simpleDonutChart.legend" 
+                [colors]="simpleDonutChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Donut Update</h6>
+            <div>
+                <div id="updatingDonutChart" class="apex-charts"  class="apex-charts" dir="ltr">
+                    <apx-chart [series]="updatingDonutChart.series" [chart]="updatingDonutChart.chart"
+                    [labels]="updatingDonutChart.labels" [responsive]="updatingDonutChart.responsive"
+                    [legend]="updatingDonutChart.legend"
+                    [colors]="updatingDonutChart.colors" [dataLabels]="updatingDonutChart.dataLabels">Semi Circular
+                    Chart</apx-chart>
+                </div>
+            
+                <div class="flex flex-wrap items-start justify-center gap-2 mt-4">
+                    <button id="add" class="px-2 py-1.5 text-xs bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20">
+                        + ADD
+                    </button>
+            
+                    <button id="remove" class="px-2 py-1.5 text-xs bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20">
+                        - REMOVE
+                    </button>
+            
+                    <button id="randomize" class="px-2 py-1.5 text-xs bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20">
+                        RANDOMIZE
+                    </button>
+            
+                    <button id="reset" class="px-2 py-1.5 text-xs bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20">
+                        RESET
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Monochrome Pie</h6>
+            <div id="monochromePieChart" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="monochromePieChart.series" [chart]="monochromePieChart.chart"
+                [labels]="monochromePieChart.labels" [theme]="monochromePieChart.theme"
+                [plotOptions]="monochromePieChart.plotOptions"
+                [dataLabels]="monochromePieChart.dataLabels" [legend]="monochromePieChart.legend"
+                dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Gradient Donut</h6>
+            <div id="gradientDonut" class="apex-charts" dir="ltr">
+                <apx-chart [series]="gradientDonutChart.series" [chart]="gradientDonutChart.chart"
+                [plotOptions]="gradientDonutChart.plotOptions" [dataLabels]="gradientDonutChart.dataLabels"
+                [fill]="gradientDonutChart.fill" 
+                [legend]="gradientDonutChart.legend" [colors]="gradientDonutChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Semi Donut</h6>
+            <div id="semiDonut" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="semiDonutChart.series" [chart]="semiDonutChart.chart"
+                [plotOptions]="semiDonutChart.plotOptions" [grid]="semiDonutChart.grid"
+                [legend]="semiDonutChart.legend" [colors]="semiDonutChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Donut with Pattern</h6>
+            <div id="donutWithPattern" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="patternedDonutChart.series" [chart]="patternedDonutChart.chart"
+                [stroke]="patternedDonutChart.stroke" [plotOptions]="patternedDonutChart.plotOptions"
+                [labels]="patternedDonutChart.labels" [dataLabels]="patternedDonutChart.dataLabels"
+                [fill]="patternedDonutChart.fill" [states]="patternedDonutChart.states"
+                [theme]="patternedDonutChart.theme" 
+                [legend]="patternedDonutChart.legend" [colors]="patternedDonutChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Pie with Image</h6>
+            <div id="pieWithImage" class="apex-charts" dir="ltr">
+                <apx-chart [series]="pieWithImageChart.series" [chart]="pieWithImageChart.chart"
+                [colors]="pieWithImageChart.colors" [fill]="pieWithImageChart.fill"
+                [stroke]="pieWithImageChart.stroke" [dataLabels]="pieWithImageChart.dataLabels"
+                [legend]="pieWithImageChart.legend" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

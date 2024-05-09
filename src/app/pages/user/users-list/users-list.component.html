@@ -1,0 +1,195 @@
+<app-page-title [title]="'List View'" [pagetitle]="'Users'"></app-page-title>
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-12">
+    <div class="xl:col-span-12">
+        <div class="card" id="usersTable">
+            <div class="card-body">
+                <div class="flex items-center">
+                    <h6 class="text-15 grow">Users List</h6>
+                    <div class="shrink-0">
+                        <button [appModalTrigger]="'addUserModal'" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20"><lucide-angular name="plus" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle"> Add User</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="!py-3.5 card-body border-y border-dashed border-slate-200 dark:border-zink-500">
+                <form action="javascript:void(0);">
+                    <div class="grid grid-cols-1 gap-5 xl:grid-cols-12">
+                        <div class="relative xl:col-span-2">
+                            <input type="text" class="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search for name, email, phone number etc..." autocomplete="off">
+                            <lucide-angular name="search" [class]="'inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zink-200 fill-slate-100 dark:fill-zink-600'"></lucide-angular>
+                        </div><!--end col-->
+                        <div class="xl:col-span-2">
+                            <ng-select [items]="StatusFiels" bindLabel="name" placeholder="Select Status">
+                                <ng-template ng-optgroup-tmp let-item="item">
+                                    {{item.country || 'Unnamed group'}}
+                                </ng-template>
+                            </ng-select>
+                        </div><!--end col-->
+                        <div class="xl:col-span-3 xl:col-start-10">
+                            <div class="flex gap-2 xl:justify-end">
+                                <div>
+                                    <button type="button" class="bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20"><lucide-angular name="download" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle"> Import</span></button>
+                                </div>
+                                <button class="flex items-center justify-center size-[37.5px] p-0 text-slate-500 btn bg-slate-100 hover:text-white hover:bg-slate-600 focus:text-white focus:bg-slate-600 focus:ring focus:ring-slate-100 active:text-white active:bg-slate-600 active:ring active:ring-slate-100 dark:bg-slate-500/20 dark:text-slate-400 dark:hover:bg-slate-500 dark:hover:text-white dark:focus:bg-slate-500 dark:focus:text-white dark:active:bg-slate-500 dark:active:text-white dark:ring-slate-400/20"><lucide-angular name="sliders-horizontal" class="size-4"></lucide-angular></button>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end grid-->
+                </form>
+            </div>
+            <div class="card-body">
+                <div class="-mx-5 -mb-5 overflow-x-auto">
+                    <!-- <ngx-datatable [rows]="userList" class="material w-full whitespace-nowrap" [loadingIndicator]="true" [columnMode]="'force'" [limit]="7" [sorts]="[{ prop: 'productName', dir: 'desc' }]" [headerHeight]="42" [footerHeight]="50" [rowHeight]="'auto'" [columns]="columns"> -->
+                    <ngx-datatable [rows]="userList" [loadingIndicator]="true" class="" [columnMode]="'force'" [limit]="10" [sorts]="[{ prop: 'productName', dir: 'desc' }]" [headerHeight]="42" [footerHeight]="50" [rowHeight]="'auto'" [columns]="columns">
+                    @for(column of columns;track $index){
+                    <ngx-datatable-column name="{{column.name}}" prop="{{column.prop}}" [width]="column.prop == 'name' ? 200 : (column.prop == 'id' ? 10 : (column.prop == 'email' ? 200 : 100))" headerClass="text-left relative bg-slate-100 dark:bg-zink-600 after:absolute ltr:after:border-l-2 rtl:after:border-r-2 ltr:after:left-0 rtl:after:right-0 after:top-0 after:bottom-0 after:border-transparent [&.active]:after:border-custom-500 [&.active]:bg-slate-100 dark:[&.active]:bg-zink-600 px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort" 
+                    cellClass="px-3.5 py-2.5 first:pl-5">
+                        <ng-template ngx-datatable-cell-template let-row="row" let-value="value" let-rowIndex="rowIndex">
+                            @if(column.prop === 'id'){
+                            <div class="flex items-center h-full">
+                                <input id="Checkbox1" class="size-4 bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800 cursor-pointer" type="checkbox">
+                            </div>
+                            }@else if(column.prop === 'userId'){
+                            <a href="javascript:void(0);" class="transition-all duration-150 ease-linear text-custom-500 hover:text-custom-600 user-id">{{value}}</a>
+                            }@else if(column.prop === 'name'){
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center justify-center size-10 font-medium rounded-full shrink-0 bg-slate-200 text-slate-800 dark:text-zink-50 dark:bg-zink-600">
+                                    @if(row.img){
+                                    <img src="{{row.img}}" alt="" class="h-10 rounded-full">
+                                    }@else {
+                                    {{row.name.charAt(0)}}
+                                    }
+                                </div>
+                                <div class="grow">
+                                    <h6 class="mb-1"><a href="javascript:void(0);" class="name">{{value}}</a></h6>
+                                    <p class="text-slate-500 dark:text-zink-200">{{row.designation}}</p>
+                                </div>
+                            </div>
+                            }@else if(column.prop === 'status'){
+                            <span class="px-2.5 py-0.5 text-xs font-medium rounded border border-transparent  dark:border-transparent inline-flex items-center status" [ngClass]="{'bg-green-100 text-green-500 dark:bg-green-500/20': value == 'Verified',
+                                    'bg-slate-100 text-slate-500 dark:bg-slate-500/20': value == 'Waiting',
+                                    'bg-red-100 text-red-500 dark:bg-red-500/20': value == 'Rejected'}">
+                                @if(value == 'Verified'){<lucide-angular name="check-circle" [class]="'size-3 mr-1.5'"></lucide-angular> }
+                                @if(value == 'Rejected'){<lucide-angular name="x" [class]="'size-3 mr-1.5'"></lucide-angular> }
+                                @if(value == 'Waiting'){<lucide-angular name="loader" [class]="'size-3 mr-1.5'"></lucide-angular> }
+                                {{value}}</span>
+                            }@else if(column.prop === 'actions') {
+                            <div mndropdown [placement]="(rowIndex >= itemsPerPage - 2)?'top-end':'bottom-end'" class="dropdown">
+                                <button mndropdownToggle class="flex items-center justify-center size-[30px] dropdown-toggle p-0 text-slate-500 btn bg-slate-100 hover:text-white hover:bg-slate-600 focus:text-white focus:bg-slate-600 focus:ring focus:ring-slate-100 active:text-white active:bg-slate-600 active:ring active:ring-slate-100 dark:bg-slate-500/20 dark:text-slate-400 dark:hover:bg-slate-500 dark:hover:text-white dark:focus:bg-slate-500 dark:focus:text-white dark:active:bg-slate-500 dark:active:text-white dark:ring-slate-400/20" id="productAction1" data-bs-toggle="dropdown"><lucide-angular name="more-horizontal" class="size-3"></lucide-angular></button>
+                                <ul mndropdownMenu class="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="productAction1">
+                                    <li>
+                                        <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" routerLink="/product-overview"><lucide-angular name="eye" [class]="'inline-block size-3 ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle">Overview</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" routerLink="/product-create"><lucide-angular name="file-edit" [class]="'inline-block size-3 ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle">Edit</span></a>
+                                    </li>
+                                    <li>
+                                        <a [appModalTrigger]="'deleteModal'" class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);"><lucide-angular name="trash-2" [class]="'inline-block size-3 ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle">Delete</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            }@else {
+                            {{ value }}
+                            }
+                        </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-footer class="userfooter">
+                        <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize" let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+                            <!-- <div> -->
+                            <div class="grow pl-5">
+                                <p class="text-slate-500 dark:text-zink-200">Showing <b>{{getEndIndex()}}</b> of <b>{{ totalItems }}</b> Results</p>
+                            </div>
+                            @if(totalItems > 0){
+                            <pagination-controls class="pr-5" [currentPage]="currentPage" [darkLinks]="true" [boundryLinks]="false" previousLabel="Prev" nextLabel="Next" [itemsPerPage]="itemsPerPage" [total]="totalItems" (pageChanged)="onPageChange($event)">
+                            </pagination-controls>
+                            }
+                            <!-- </div> -->
+                        </ng-template>
+                    </ngx-datatable-footer>
+
+                    }
+                    </ngx-datatable>
+
+
+                    <div class="noresult" style="display: none">
+                        <div class="py-6 text-center">
+                            <lucide-angular name="search" [class]="'size-6 mx-auto text-sky-500 fill-sky-100 dark:fill-sky-500/20'"></lucide-angular>
+                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                            <p class="mb-0 text-slate-500 dark:text-zink-200">We've searched more than 199+ users We did not find any users for you search.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--end card-->
+    </div><!--end col-->
+</div><!--end grid-->
+
+<ng-modals id="addUserModal" [placement]="'modal-center'" className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4">
+    <div class="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600">
+        <div class="flex items-center justify-between p-4 border-b dark:border-zink-300/20">
+            <h5 class="text-16">Add User</h5>
+            <button dismissModal [ModalDismiss]="'addUserModal'" class="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500"><i data-lucide="x" class="size-5"></i></button>
+        </div>
+        <div class="max-h-[calc(theme('height.screen')_-_180px)] p-4 overflow-y-auto">
+            <form action="javascript:void(0);">
+                <div class="mb-3">
+                    <label for="userId" class="inline-block mb-2 text-base font-medium">User ID</label>
+                    <input type="text" id="userId" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" disabled value="#TW1500004" required>
+                </div>
+                <div class="mb-3">
+                    <label for="joiningDateInput" class="inline-block mb-2 text-base font-medium">Joining Date</label>
+                    <input type="text" id="joiningDateInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Select date" data-provider="flatpickr" data-date-format="d M, Y">
+                </div>
+                <div class="mb-3">
+                    <label for="userNameInput" class="inline-block mb-2 text-base font-medium">Name</label>
+                    <input type="text" id="userNameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="emailInput" class="inline-block mb-2 text-base font-medium">Email</label>
+                    <input type="email" id="emailInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumberInput" class="inline-block mb-2 text-base font-medium">Phone Number</label>
+                    <input type="text" id="phoneNumberInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="12345 67890" required>
+                </div>
+                <div class="mb-3">
+                    <label for="statusSelect" class="inline-block mb-2 text-base font-medium">Status</label>
+                    <select class="form-input border-slate-300 focus:outline-none focus:border-custom-500" data-choices data-choices-search-false name="statusSelect" id="statusSelect">
+                        <option value="">Select Status</option>
+                        <option value="Verified">Verified</option>
+                        <option value="Waiting">Waiting</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="locationInput" class="inline-block mb-2 text-base font-medium">Location</label>
+                    <input type="text" id="locationInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Location" required>
+                </div>
+                <div class="flex justify-end gap-2 mt-4">
+                    <button type="reset" dismissModal [ModalDismiss]="'addUserModal'" class="text-red-500 transition-all duration-200 ease-linear bg-white border-white btn hover:text-red-600 focus:text-red-600 active:text-red-600 dark:bg-zink-500 dark:border-zink-500">Cancel</button>
+                    <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</ng-modals><!--end add user-->
+
+<ng-modals id="deleteModal" [placement]="'modal-center'" className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4">
+    <div class="w-screen md:w-[25rem] bg-white shadow rounded-md dark:bg-zink-600">
+        <div class="max-h-[calc(theme('height.screen')_-_180px)] overflow-y-auto px-6 py-8">
+            <div class="float-right">
+                <button dismissModal [ModalDismiss]="'deleteModal'" class="transition-all duration-200 ease-linear text-slate-500 hover:text-red-500"><i data-lucide="x" class="size-5"></i></button>
+            </div>
+            <img src="assets/images/delete.png" alt="" class="block h-12 mx-auto">
+            <div class="mt-5 text-center">
+                <h5 class="mb-1">Are you sure?</h5>
+                <p class="text-slate-500 dark:text-zink-200">Are you certain you want to delete this record?</p>
+                <div class="flex justify-center gap-2 mt-6">
+                    <button type="reset" dismissModal [ModalDismiss]="'deleteModal'" class="bg-white text-slate-500 btn hover:text-slate-500 hover:bg-slate-100 focus:text-slate-500 focus:bg-slate-100 active:text-slate-500 active:bg-slate-100 dark:bg-zink-600 dark:hover:bg-slate-500/10 dark:focus:bg-slate-500/10 dark:active:bg-slate-500/10">Cancel</button>
+                    <button type="submit" class="text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Yes, Delete It!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-modals>

@@ -1,0 +1,70 @@
+<app-page-title [title]="'File Upload'" [pagetitle]="'Forms'"></app-page-title>
+
+<div class="card" id="dropzone-preview-list">
+    <div class="card-body">
+        <h6 class="mb-4 text-15">Dropzone</h6>
+        <dropzone class="dropzone" [config]="dropzoneConfig" [message]="'Drag and drop your files or browse your files.'" (success)="onUploadSuccess($event)">
+        </dropzone>
+        @if (uploadedFiles) {
+        <ul class="mb-0" id="dropzone-preview">
+            @for (file of uploadedFiles; track $index) {
+            <li class="mt-2" id="dropzone-preview-list">
+                <!-- This is used as the file preview template -->
+                <div class="border rounded border-slate-200 dark:border-zink-500">
+                    <div class="flex p-2">
+                        <div class="shrink-0 me-3">
+                            <div class="p-2 rounded-md size-14 bg-slate-100 dark:bg-zink-600">
+                                <img data-dz-thumbnail class="block w-full h-full rounded-md" [src]="file.dataURL" alt="Dropzone-Image">
+                            </div>
+                        </div>
+                        <div class="grow">
+                            <div class="pt-1">
+                                <h5 class="mb-1 text-15" data-dz-name>{{ file.name }}</h5>
+                                <p class="mb-0 text-slate-500 dark:text-zink-200" data-dz-size>{{ file.size }}</p>
+                                <strong class="error text-danger" data-dz-errormessage></strong>
+                            </div>
+                        </div>
+                        <div class="shrink-0 ms-3">
+                            <button (click)="removeFile(file)" data-dz-remove class="px-2 py-1.5 text-xs text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            }
+        </ul>
+        }
+    </div>
+</div><!--end card-->
+
+<div class="card" id="dropzone-preview2">
+    <div class="card-body">
+        <h6 class="mb-4 text-15">Bordered Dashed Dropzone</h6>
+        <dropzone class="dropzone" [config]="dropzonesConfig" [message]="'Drag and drop your files or browse your files.'" (success)="onUploadsBorderSuccess($event)">
+        </dropzone>
+        @if (uploadedFile) {
+        <ul class="flex flex-wrap mb-0 gap-x-5" id="dropzone-preview2">
+            @for (file of uploadedFile; track $index) {
+            <li class="mt-5" id="dropzone-preview-list2">
+                <!-- This is used as the file preview template -->
+                <div class="border rounded border-slate-200 dark:border-zink-500">
+                    <div class="p-2 text-center">
+                        <div>
+                            <div class="p-2 mx-auto rounded-md size-14 bg-slate-100 dark:bg-zink-600">
+                                <img data-dz-thumbnail class="block w-full h-full rounded-md" [src]="file.dataURL" alt="Dropzone-Image">
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <h5 class="mb-1 text-15" data-dz-name>{{ file.name }}</h5>
+                            <p class="mb-0 text-slate-500 dark:text-zink-200" data-dz-size>{{ file.size }}</p>
+                            <strong class="error text-danger" data-dz-errormessage></strong>
+                        </div>
+                        <div class="mt-2">
+                            <button (click)="removeFsile(file)" class="px-2 py-1.5 text-xs text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            }
+        </ul>}
+    </div>
+</div><!--end card-->

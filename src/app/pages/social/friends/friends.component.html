@@ -1,0 +1,198 @@
+<app-page-title [title]="'Friends'" [pagetitle]="'Social Media'"></app-page-title>
+
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-x-5">
+    <div class="xl:col-span-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="flex items-center gap-3 mb-5">
+                    <div class="rounded-full bg-slate-100 shrink-0 dark:bg-zink-600">
+                        <img src="assets/images/users/avatar-1.png" alt="" class="rounded-full h-14">
+                    </div>
+                    <div class="grow">
+                        <h6 class="mb-1 text-15">Paula Keenan <lucide-angular name="badge-check" [class]="'inline-block size-4 text-sky-500 fill-sky-100 dark:fill-sky-500/20'"></lucide-angular></h6>
+                        <p class="text-slate-500 dark:text-zink-200">&#64;paulak145</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 text-center divide-y sm:divide-y-0 sm:divide-x sm:grid-cols-3 divide-slate-200 dark:divide-zink-500 divide-dashed rtl:divide-x-reverse">
+                    <div class="py-3 sm:py-0 sm:px-3">
+                        <h6>489</h6>
+                        <p class="text-slate-500 dark:text-zink-200">Posts</p>
+                    </div>
+                    <div class="py-3 sm:py-0 sm:px-3">
+                        <h6>4.6k</h6>
+                        <p class="text-slate-500 dark:text-zink-200">Follower</p>
+                    </div>
+                    <div class="py-3 sm:py-0 sm:px-3">
+                        <h6>159</h6>
+                        <p class="text-slate-500 dark:text-zink-200">Following</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end card-->
+        <div class="card">
+            <div class="card-body">
+                <ul class="flex flex-col w-full gap-2 mb-4 text-sm font-medium shrink-0 nav-tabs">
+                    <li class="group grow">
+                        <a routerLink="/dashboards-social" class="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><lucide-angular name="home" [class]="'inline-block size-4 align-middle ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle"> Feed</span></a>
+                    </li>
+                    <li class="group grow active">
+                        <a routerLink="/apps-social-friends" class="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><lucide-angular name="user" [class]="'inline-block size-4 align-middle ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle"> Friends</span></a>
+                    </li>
+                    <li class="group grow">
+                        <a routerLink="/apps-social-event" class="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><lucide-angular name="calendar-days" [class]="'inline-block size-4 align-middle ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle"> Event</span></a>
+                    </li>
+                    <li class="group grow">
+                        <a routerLink="/apps-social-video" class="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><lucide-angular name="clapperboard" [class]="'inline-block size-4 align-middle ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle"> Watch Video</span></a>
+                    </li>
+                    <li class="group grow">
+                        <a routerLink="/apps-social-marketplace" class="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><lucide-angular name="shopping-cart" [class]="'inline-block size-4 align-middle ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle"> Marketplace</span></a>
+                    </li>
+                    <li class="group grow">
+                        <a routerLink="/pages-account-settings" class="inline-block px-4 w-full py-2 text-base transition-all duration-300 ease-linear rounded-md text-slate-500 dark:text-zink-200 border border-transparent group-[.active]:bg-custom-500 dark:group-[.active]:bg-custom-500 group-[.active]:text-white dark:group-[.active]:text-white hover:text-custom-500 dark:hover:text-custom-500 active:text-custom-500 dark:active:text-custom-500 -mb-[1px]"><lucide-angular name="settings" [class]="'inline-block size-4 align-middle ltr:mr-1 rtl:ml-1'"></lucide-angular> <span class="align-middle"> Settings</span></a>
+                    </li>
+                </ul>
+                <p class="mb-4 text-slate-500 dark:text-zink-200">Suggestion Pages</p>
+                <ul class="flex flex-col gap-4">
+                    <li>
+                        <a href="javascript:void(0);" class="flex gap-3">
+                            <img src="assets/images/brand/adwords.png" alt="" class="h-5">
+                            <h6>Harmonious Team</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="flex gap-3">
+                            <img src="assets/images/brand/twitter.png" alt="" class="h-5">
+                            <h6>Twitter</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="flex gap-3">
+                            <img src="assets/images/brand/meta.png" alt="" class="h-5">
+                            <h6>Design Stack</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="flex gap-3">
+                            <img src="assets/images/brand/figma.png" alt="" class="h-5">
+                            <h6>UI / UX Community</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><!--end card-->
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-4 text-15">Active Friends</h6>
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-2.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-3.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-4.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-5.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-6.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-7.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-8.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-9.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative">
+                        <img src="assets/images/users/avatar-10.png" alt="" class="h-10 border rounded-full border-slate-200 dark:border-zink-500">
+                        <span class="top-0 ltr:right-0 rtl:left-0 absolute  size-2.5 bg-green-400 border-2 border-white dark:border-zink-700 rounded-full"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="relative flex items-center justify-center size-10 rounded-full bg-custom-100 text-custom-500 dark:bg-custom-500/20">
+                        5+
+                    </a>
+                </div>
+            </div>
+        </div><!--end card-->
+    </div><!--end-->
+    <div class="xl:col-span-9" id="friendList">
+        <div class="flex items-center gap-3">
+            <h6 class="text-15 grow">Followers (254)</h6>
+            <div class="shrink-0">
+                <div class="relative dropdown sortble-dropdown" mndropdown [placement]="'bottom-end'">
+                    <a href="javascript:void(0);" mndropdownToggle class="inline-block py-3 dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown"><span class="dropdown-title">Following</span> <lucide-angular name="chevron-down" class="inline-block size-4 ml-1"></lucide-angular></a>
+
+                    <ul mndropdownMenu class="absolute z-50 py-2 mt-1 text-left list-none bg-white rounded-md shadow-md dropdown-menu min-w-[9rem] dark:bg-zink-600" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a data-sort="friend_name" class="block dropdown-item px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">Name</a>
+                        </li>
+                        <li>
+                            <a data-sort="username" class="block dropdown-item px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">Username</a>
+                        </li>
+                        <li>
+                            <a data-sort="date" class="block dropdown-item px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">Date</a>
+                        </li>
+                        <li>
+                            <a data-sort="status" class="block dropdown-item px-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">Status</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto">
+
+
+            <ngx-datatable [rows]="friendList " [loadingIndicator]="true" class="material w-full border-separate table-custom border-spacing-y-2 whitespace-nowrap" [columnMode]="'force'" [limit]="7" [sorts]="[{ prop: 'productName', dir: 'desc' }]" [headerHeight]="42" [footerHeight]="50" [rowHeight]="'auto'" [columns]="columns">
+
+                @for(column of columns;track $index){
+
+                <ngx-datatable-column name="{{column.name}}" prop="{{column.prop}}" [width]="column.prop == 'productCode' ? 200 : (column.prop == 'productName' ? 330 : (column.prop == 'status' ? 150 : 100))" headerClass="ltr:text-left rtl:text-right relative bg-white after:absolute ltr:after:border-l-2 rtl:after:border-r-2 ltr:after:left-0 rtl:after:right-0 after:top-0 after:bottom-0 after:border-transparent dark:bg-zink-700 px-3.5 py-2.5 font-semibold sort" cellClass="relative bg-white dark:bg-zink-700 px-3.5 py-2.5 mt-2">
+                    <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                        @if(column.prop === 'username'){
+                        <a href="javascript:void(0);" class="text-custom-500 username">{{value}}</a>
+                        }@else if(column.prop === 'isFollow') {
+                        <button type="button" class="bg-white border-dashed group/item status toggle-button active text-sky-500 btn border-sky-500 hover:text-sky-500 hover:bg-sky-50 hover:border-sky-600 focus:text-sky-600 focus:bg-sky-50 focus:border-sky-600 active:text-sky-600 active:bg-sky-50 active:border-sky-600 dark:bg-zink-700 dark:ring-sky-400/20 dark:hover:bg-sky-800/20 dark:focus:bg-sky-800/20 dark:active:bg-sky-800/20 px-2 py-1.5 text-xs" [ngClass]="{'inactive': column.prop === 'isFollow'}"  (click)="toggleFollow(row)">
+                            @if(row.isFollow) {
+                            <span class=" group-[.active]/item"><lucide-angular name="plus" [class]="'inline-block size-3 mr-1'"></lucide-angular> Follow</span>
+                            }@else{
+                            <span class="group-[.active]/item"><lucide-angular name="user-round-x" [class]="'inline-block size-3 mr-1'"></lucide-angular> Unfollow</span>
+                            }
+                        </button>
+                        }@else {
+                        {{ value }}
+                        }
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-footer>
+                    <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize" let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+                        <div class="grow">
+                            <p class="text-slate-500 dark:text-zink-200">Showing <b>{{getEndIndex()}}</b> of <b>{{ totalItems }}</b> Results</p>
+                        </div>
+                        @if(totalItems > 0){
+                        <pagination-controls [currentPage]="currentPage" [darkLinks]="true" previousLabel="Prev" nextLabel="Next" [itemsPerPage]="itemsPerPage" [total]="totalItems" (pageChanged)="onPageChange($event)">
+
+                        </pagination-controls>
+                        }
+                    </ng-template>
+                </ngx-datatable-footer>
+
+                }
+            </ngx-datatable>
+
+        </div>
+
+    </div><!--end-->
+</div><!--end-->

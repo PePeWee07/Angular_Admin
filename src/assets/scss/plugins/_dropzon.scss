@@ -1,0 +1,17 @@
+#dropzone-preview-list {
+    dropzone>.dropzone.dz-wrapper .dz-message {
+        min-height: 200px !important;
+        @apply border-slate-200 dark:border-zink-500 text-slate-500 dark:text-zink-200 rounded-md bg-slate-100 dark:bg-zink-600;
+    }
+}
+
+.dropzone {
+    @apply border-0 p-0 bg-transparent #{!important};
+}
+
+#dropzone-preview2 {
+    dropzone>.dropzone.dz-wrapper .dz-message {
+        min-height: 200px !important;
+        @apply border-slate-200 dark:border-zink-500 text-slate-500 dark:text-zink-200 rounded-md bg-white dark:bg-zink-700;
+    }
+}

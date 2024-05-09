@@ -1,0 +1,423 @@
+<app-page-title [title]="'Analytics'" [pagetitle]="'Dashboards'"></app-page-title>
+
+<div class="grid grid-cols-12 gap-x-5">
+    <div class="order-1 md:col-span-6 lg:col-span-3 col-span-12 2xl:order-1 bg-green-100 dark:bg-green-500/20 card 2xl:col-span-2 group-data-[skin=bordered]:border-green-500/20 relative overflow-hidden">
+        <div class="card-body">
+            <lucide-angular name="kanban" [class]="'absolute top-0 size-32 stroke-1 text-green-200/50 dark:text-green-500/20 ltr:-right-10 rtl:-left-10'"></lucide-angular>
+            <div class="flex items-center justify-center size-12 bg-green-500 rounded-md text-15 text-green-50">
+                <lucide-angular name="users"></lucide-angular>
+            </div>
+            <h5 class="mt-5 mb-2"><span class="counter-value" [countUp]="15876">0</span></h5>
+            <p class="text-slate-500 dark:text-slate-200">Total Users</p>
+        </div>
+    </div><!--end col-->
+    <div class="order-2 md:col-span-6 lg:col-span-3 col-span-12 2xl:order-1 bg-orange-100 dark:bg-orange-500/20 card 2xl:col-span-2 group-data-[skin=bordered]:border-orange-500/20 relative overflow-hidden">
+        <div class="card-body">
+            <lucide-angular name="list-filter" [class]="'absolute top-0 size-32 stroke-1 text-orange-200/50 dark:text-orange-500/20 ltr:-right-10 rtl:-left-10'"></lucide-angular>
+            <div class="flex items-center justify-center size-12 bg-orange-500 rounded-md text-15 text-orange-50">
+                <lucide-angular name="cog"></lucide-angular>
+            </div>
+            <h5 class="mt-5 mb-2"><span class="counter-value" [countUp]="103.15" [options]="{decimalPlaces:2}">0</span>k</h5>
+            <p class="text-slate-500 dark:text-slate-200">Sessions</p>
+        </div>
+    </div><!--end col-->
+    <div class="order-5 col-span-12 2xl:order-1 card 2xl:row-span-2 2xl:col-span-8">
+        <div class="card-body">
+            <div class="flex items-center gap-2 mb-3">
+                <h6 class="text-15 grow">Platform Perspective</h6>
+                <div class="relative dropdown shrink-0" mndropdown [placement]="'bottom-end'">
+                    <div mndropdownToggle>
+                        <span class="ltr:mr-1 rtl:ml-1 text-slate-500 dark:zink-200">Sort by</span>
+                        <button type="button" class="px-2 py-1.5 text-xs bg-white border-dashed text-slate-500 btn border-slate-500 hover:text-slate-500 hover:bg-slate-50 hover:border-slate-600 focus:text-slate-600 focus:bg-slate-50 focus:border-slate-600 active:text-slate-600 active:bg-slate-50 active:border-slate-600 dark:bg-zink-700 dark:text-zink-200 dark:border-zink-400 dark:ring-zink-400/20 dark:hover:bg-zink-600 dark:hover:text-zink-100 dark:focus:bg-zink-600 dark:focus:text-zink-100 dark:active:bg-zink-600 dark:active:text-zink-100 dropdown-toggle" id="emailDataDropdown" data-bs-toggle="dropdown">
+                            This Yearly <lucide-angular name="chevron-down" [class]="'inline-block size-4 ltr:ml-1 rlt:mr-1'"></lucide-angular>
+                        </button>
+                    </div>
+
+                    <ul mndropdownMenu class="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="emailDataDropdown">
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Weekly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">3 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">6 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">This Yearly</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="platformPerspective" class="apex-charts" data-chart-colors='["bg-custom-500"]' dir="ltr">
+                <apx-chart [series]="platformPerspective.series" [chart]="platformPerspective.chart" [legend]="platformPerspective.legend" [grid]="platformPerspective.grid" [colors]="platformPerspective.colors" dir="ltr"></apx-chart>
+            </div>
+            <div id="chartdiv"></div>
+        </div>
+    </div><!--end col-->
+    <div class="order-3 md:col-span-6 lg:col-span-3 col-span-12 2xl:order-1 bg-sky-100 dark:bg-sky-500/20 card 2xl:col-span-2 group-data-[skin=bordered]:border-sky-500/20 relative overflow-hidden">
+        <div class="card-body">
+            <lucide-angular name="list-filter" [class]="'absolute top-0 size-32 stroke-1 text-sky-200/50 dark:text-sky-500/20 ltr:-right-10 rtl:-left-10'"></lucide-angular>
+            <div class="flex items-center justify-center size-12 rounded-md bg-sky-500 text-15 text-sky-50">
+                <lucide-angular name="coins"></lucide-angular>
+            </div>
+            <h5 class="mt-5 mb-2"><span class="counter-value" [countUp]="1">0</span>M <span class="counter-value" [countUp]="29">0</span>sec</h5>
+            <p class="text-slate-500 dark:text-slate-200">Avg. Visit Duration</p>
+        </div>
+    </div><!--end col-->
+    <div class="order-4 md:col-span-6 lg:col-span-3 col-span-12 2xl:order-1 bg-purple-100 dark:bg-purple-500/20 card 2xl:col-span-2 group-data-[skin=bordered]:border-purple-500/20 relative overflow-hidden">
+        <div class="card-body">
+            <lucide-angular name="kanban" [class]="'absolute top-0 size-32 stroke-1 text-purple-200/50 dark:text-purple-500/20 ltr:-right-10 rtl:-left-10'"></lucide-angular>
+            <div class="flex items-center justify-center size-12 bg-purple-500 rounded-md text-15 text-purple-50">
+                <lucide-angular name="users"></lucide-angular>
+            </div>
+            <h5 class="mt-5 mb-2"><span class="counter-value" [countUp]="49.77" [options]="{decimalPlaces:2}">0</span>%</h5>
+            <p class="text-slate-500 dark:text-slate-200">Bounce Rate</p>
+        </div>
+    </div><!--end col-->
+    <div class="order-6 col-span-12 2xl:order-1 card 2xl:col-span-5">
+        <div class="card-body">
+            <div class="flex items-center gap-2">
+                <h6 class="mb-3 text-15 grow">Location-Based Response Times</h6>
+                <div class="shrink-0">
+                    <button type="button" class="px-2 py-1.5 text-xs text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20">
+                        View More <lucide-angular name="move-right" [class]="'inline-block size-4 ltr:ml-1 rlt:mr-1 rtl:-rotate-180'"></lucide-angular>
+                    </button>
+                </div>
+            </div>
+
+            <div id="responseTimes" class="apex-charts" dir="ltr">
+                <apx-chart [series]="responseTimes.series" [chart]="responseTimes.chart" [stroke]="responseTimes.stroke" [dataLabels]="responseTimes.dataLabels" [colors]="responseTimes.colors" [xaxis]="responseTimes.xaxis" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="order-7 col-span-12 2xl:order-1 card 2xl:col-span-7">
+        <div class="card-body">
+            <div class="flex items-center gap-2">
+                <h6 class="mb-3 text-15 grow">Pages Interaction</h6>
+                <div class="relative dropdown shrink-0" mndropdown placement="bottom-end">
+                    <button type="button" mndropdownToggle class="px-2 py-1.5 text-xs bg-text-slate-500 btn bg-slate-100 hover:text-white hover:bg-slate-600 focus:text-white focus:bg-slate-600 focus:ring focus:ring-slate-100 active:text-white active:bg-slate-600 active:ring active:ring-slate-100 dark:bg-slate-500/20 dark:text-slate-400 dark:hover:bg-slate-500 dark:hover:text-white dark:focus:bg-slate-500 dark:focus:text-white dark:active:bg-slate-500 dark:active:text-white dark:ring-slate-400/20 dropdown-toggle" id="emailDataDropdown" data-bs-toggle="dropdown">
+                        This Yearly <lucide-angular name="chevron-down" [class]="'inline-block size-4 ltr:ml-1 rlt:mr-1'"></lucide-angular>
+                    </button>
+
+                    <ul mndropdownMenu class="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="emailDataDropdown">
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Weekly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">3 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">6 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">This Yearly</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pagesInteraction" class="apex-charts" dir="ltr">
+                <apx-chart [series]="pagesInteraction.series" [chart]="pagesInteraction.chart" [plotOptions]="pagesInteraction.plotOptions" [dataLabels]="pagesInteraction.dataLabels" [yaxis]="pagesInteraction.yaxis" [stroke]="pagesInteraction.stroke" [grid]="pagesInteraction.grid" [colors]="pagesInteraction.colors" [xaxis]="pagesInteraction.xaxis" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="order-8 col-span-12 lg:col-span-6 2xl:order-1 card 2xl:col-span-4">
+        <div class="card-body">
+            <div class="flex items-center gap-2 mb-3">
+                <h6 class="text-15 grow">User Device <a href="javascript:void(0);" data-tooltip="default" data-tooltip-content="You can see your number of desktop, mobile, and tablet users." class="inline-block align-middle ltr:ml-1 rtl:mr-1 text-slate-500 dark:text-zink-200"><lucide-angular name="info" [class]="'size-4'"></lucide-angular></a></h6>
+                <div class="relative dropdown shrink-0 mndropdown" mndropdown placement="bottom-end">
+                    <button type="button" mndropdownToggle class="flex items-center justify-center size-[30px] p-0 bg-white text-slate-500 btn hover:text-slate-500 hover:bg-slate-100 focus:text-slate-500 focus:bg-slate-100 active:text-slate-500 active:bg-slate-100 dark:bg-zink-700 dark:hover:bg-slate-500/10 dark:focus:bg-slate-500/10 dark:active:bg-slate-500/10 dropdown-toggle" id="userDeviceDropdown" data-bs-toggle="dropdown">
+                        <lucide-angular name="more-vertical" [class]="'inline-block size-4'"></lucide-angular>
+                    </button>
+
+                    <ul mndropdownMenu class="absolute z-50  py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="userDeviceDropdown">
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Weekly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">3 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">6 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">This Yearly</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="userDeviceCharts" class="apex-charts" dir="ltr">
+                <apx-chart [series]="userDeviceCharts.series" [chart]="userDeviceCharts.chart" [fill]="userDeviceCharts.fill" [markers]="userDeviceCharts.markers" [responsive]="userDeviceCharts.responsive" [stroke]="userDeviceCharts.stroke" [legend]="userDeviceCharts.legend" [colors]="userDeviceCharts.colors" [xaxis]="userDeviceCharts.xaxis" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="order-9 col-span-12 lg:col-span-6 2xl:order-1 card 2xl:col-span-4">
+        <div class="card-body">
+            <div class="flex items-center gap-2 mb-3">
+                <h6 class="text-15 grow">Satisfaction Level <a href="javascript:void(0);" data-tooltip="default" data-tooltip-content="The 1-to-5 satisfaction scale is used for measuring customer satisfaction" class="inline-block align-middle ltr:ml-1 rtl:mr-1 text-slate-500 dark:text-zink-200"><lucide-angular name="info" [class]="'size-4'"></lucide-angular></a></h6>
+                <div class="relative dropdown shrink-0" mndropdown>
+                    <button type="button" mndropdownToggle class="flex items-center justify-center size-[30px] p-0 bg-white text-slate-500 btn hover:text-slate-500 hover:bg-slate-100 focus:text-slate-500 focus:bg-slate-100 active:text-slate-500 active:bg-slate-100 dark:bg-zink-700 dark:hover:bg-slate-500/10 dark:focus:bg-slate-500/10 dark:active:bg-slate-500/10 dropdown-toggle" id="satisfactionRateDropdown" data-bs-toggle="dropdown">
+                        <lucide-angular name="more-vertical" [class]="'inline-block size-4'"></lucide-angular>
+                    </button>
+
+                    <ul mndropdownMenu class="absolute z-50  py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="satisfactionRateDropdown">
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Weekly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">3 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">6 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">This Yearly</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="satisfactionRate" class="apex-charts" dir="ltr">
+                <apx-chart [series]="satisfactionRate.series" [chart]="satisfactionRate.chart" [fill]="satisfactionRate.fill" [plotOptions]="satisfactionRate.plotOptions" [labels]="satisfactionRate.labels" [stroke]="satisfactionRate.stroke" [grid]="satisfactionRate.grid" [colors]="satisfactionRate.colors" dir="ltr"></apx-chart>
+            </div>
+            <p class="text-center text-15 text-slate-500 dark:text-zink-200">Based on Likes 💖</p>
+        </div>
+    </div><!--end col-->
+    <div class="order-10 col-span-12 2xl:order-1 card 2xl:col-span-4">
+        <div class="card-body">
+            <div class="flex items-center gap-2 mb-3">
+                <h6 class="text-15 grow">Daily Visit Insights <a href="javascript:void(0);" data-tooltip="default" data-tooltip-content="Analyst or business user discovering a pattern in data or a relationship between variables" class="inline-block align-middle ltr:ml-1 rtl:mr-1 text-slate-500 dark:text-zink-200"><lucide-angular name="info" [class]="'size-4'"></lucide-angular></a></h6>
+                <div mndropdown placement="bottom-end" class="relative dropdown shrink-0">
+                    <button mndropdownToggle type="button" class="flex items-center justify-center size-[30px] p-0 bg-white text-slate-500 btn hover:text-slate-500 hover:bg-slate-100 focus:text-slate-500 focus:bg-slate-100 active:text-slate-500 active:bg-slate-100 dark:bg-zink-700 dark:hover:bg-slate-500/10 dark:focus:bg-slate-500/10 dark:active:bg-slate-500/10 dropdown-toggle" id="dailyVisitInsightsDropdown" data-bs-toggle="dropdown">
+                        <lucide-angular name="more-vertical" [class]="'inline-block size-4'"></lucide-angular>
+                    </button>
+
+                    <ul mndropdownMenu class="absolute z-50 py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="dailyVisitInsightsDropdown">
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Weekly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">1 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">3 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">6 Monthly</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="javascript:void(0);">This Yearly</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="dailyVisitInsightsChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="dailyVisitInsightsChart.series" [annotations]="dailyVisitInsightsChart.annotations" [chart]="dailyVisitInsightsChart.chart" [dataLabels]="dailyVisitInsightsChart.dataLabels" [fill]="dailyVisitInsightsChart.fill" [plotOptions]="dailyVisitInsightsChart.plotOptions" [xaxis]="dailyVisitInsightsChart.xaxis" [yaxis]="dailyVisitInsightsChart.yaxis" [stroke]="dailyVisitInsightsChart.stroke" [grid]="dailyVisitInsightsChart.grid" [colors]="dailyVisitInsightsChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="order-11 col-span-12 2xl:order-1 card 2xl:col-span-12">
+        <div class="card-body">
+            <div class="grid items-center grid-cols-1 gap-3 mb-5 xl:grid-cols-12">
+                <div class="xl:col-span-3">
+                    <h6 class="text-15">Products Statistics</h6>
+                </div><!--end col-->
+                <div class="xl:col-span-3 xl:col-start-10">
+                    <div class="flex gap-3">
+                        <div class="relative grow">
+                            <input type="text" class="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search for ..." autocomplete="off">
+                            <lucide-angular name="search" [class]="'inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zink-200 fill-slate-100 dark:fill-zink-600'"></lucide-angular>
+                        </div>
+                        <button type="button" class="bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20"><i class="align-baseline ltr:pr-1 rtl:pl-1 ri-download-2-line"></i> Export</button>
+                    </div>
+                </div><!--end col-->
+            </div><!--end grid-->
+
+            <div class="-mx-5 overflow-x-auto">
+                <table class="w-full whitespace-nowrap">
+                    <thead class="ltr:text-left rtl:text-right bg-slate-100 text-slate-500 dark:text-zink-200 dark:bg-zink-600">
+                        <tr>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500 w-10">
+                                <div class="flex items-center h-full">
+                                    <input id="productsCheckAll" class="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800" type="checkbox">
+                                </div>
+                            </th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">Products</th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">Price</th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">Income</th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">Sales</th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">View</th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">Click</th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">Click (%)</th>
+                            <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold border-y border-slate-200 dark:border-zink-500">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(data of products ;track $index){
+                        <tr>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">
+                                <div class="flex items-center h-full">
+                                    <input id="productsCheck1" class="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800" type="checkbox">
+                                </div>
+                            </td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">{{data.productName}}</td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">{{data.price}}</td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">{{data.income}}</td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">{{data.sales}}</td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">{{data.view}}</td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">{{data.click}}</td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">{{data.clickPercentage}}</td>
+                            <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 border-y border-slate-200 dark:border-zink-500">
+                                <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded border border-transparent dark:border-transparent" [ngClass]="{'bg-green-100 text-green-500 dark:bg-green-500/20':data.status==='Active','bg-red-100 text-red-500 dark:bg-red-500/20':data.status == 'Unactive',}"><lucide-angular name="check-circle-2" [class]="'size-3 ltr:mr-1 rtl:ml-1'"></lucide-angular> {{data.status}}</span>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex flex-col items-center mt-5 md:flex-row">
+                <div class="mb-4 grow md:mb-0">
+                    <p class="text-slate-500 dark:text-zink-200">Showing <b>{{getEndIndex()}}</b> of <b>{{ totalItems }}</b> Results</p>
+                </div>
+                <ul class="flex flex-wrap items-center gap-2 shrink-0">
+                    <pagination-controls [currentPage]="currentPage" previousLabel="Prev" nextLabel="Next" [itemsPerPage]="itemsPerPage" [total]="totalItems" (pageChanged)="onPageChange($event)">
+                    </pagination-controls>
+                </ul>
+            </div>
+        </div><!--end col-->
+    </div>
+    <div class="order-12 col-span-12 lg:col-span-6 2xl:order-1 card 2xl:col-span-3">
+        <div class="card-body">
+            <h6 class="mb-3 text-15">Analytics Reports</h6>
+            <div id="lineWithDataLabel" class="apex-charts" dir="ltr">
+                <apx-chart [series]="lineWithDataLabel.series" [chart]="lineWithDataLabel.chart" [dataLabels]="lineWithDataLabel.dataLabels" [legend]="lineWithDataLabel.legend" [markers]="lineWithDataLabel.markers" [xaxis]="lineWithDataLabel.xaxis" [yaxis]="lineWithDataLabel.yaxis" [stroke]="lineWithDataLabel.stroke" [grid]="lineWithDataLabel.grid" [colors]="lineWithDataLabel.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="col-span-12 lg:col-span-6 order-[13] 2xl:order-1 card 2xl:col-span-3">
+        <div class="card-body">
+            <h6 class="mb-3 text-15">Status of Monthly Campaign</h6>
+            <ul class="flex flex-col gap-5">
+                <li class="flex items-center gap-3">
+                    <div class="flex items-center justify-center size-8 text-red-500 bg-red-100 rounded-md dark:bg-red-500/20 shrink-0">
+                        <lucide-angular name="mail" [class]="'size-4'"></lucide-angular>
+                    </div>
+                    <h6 class="grow">Clicked</h6>
+                    <p class="text-slate-500 dark:text-zink-200">9,745</p>
+                    <div class="w-12 text-green-500 ltr:text-right rtl:text-left">
+                        2.5%
+                    </div>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="flex items-center justify-center size-8 rounded-md text-sky-500 bg-sky-100 dark:bg-sky-500/20 shrink-0">
+
+                        <lucide-angular name="users" [class]="'size-4'"></lucide-angular>
+
+                    </div>
+                    <h6 class="grow">Subscribe</h6>
+                    <p class="text-slate-500 dark:text-zink-200">3,352</p>
+                    <div class="w-12 text-green-500 ltr:text-right rtl:text-left">
+                        18.9%
+                    </div>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="flex items-center justify-center size-8 text-orange-500 bg-orange-100 rounded-md dark:bg-orange-500/20 shrink-0">
+
+                        <lucide-angular name="user-round-x" [class]="'size-4'"></lucide-angular>
+
+                    </div>
+                    <h6 class="grow">Unsubscribe</h6>
+                    <p class="text-slate-500 dark:text-zink-200">85,745</p>
+                    <div class="w-12 text-red-500 ltr:text-right rtl:text-left">
+                        1.2%
+                    </div>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="flex items-center justify-center size-8 text-green-500 bg-green-100 rounded-md dark:bg-green-500/20 shrink-0">
+                        <lucide-angular name="eye" [class]="'size-4'"></lucide-angular>
+                    </div>
+                    <h6 class="grow">Viewers</h6>
+                    <p class="text-slate-500 dark:text-zink-200">85,745</p>
+                    <div class="w-12 text-green-500 ltr:text-right rtl:text-left">
+                        11.6%
+                    </div>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="flex items-center justify-center size-8 rounded-md text-slate-500 bg-slate-100 dark:bg-zink-600 dark:text-zink-200 shrink-0">
+                        <lucide-angular name="package-open" [class]="'size-4'"></lucide-angular>
+                    </div>
+                    <h6 class="grow">Opened</h6>
+                    <p class="text-slate-500 dark:text-zink-200">85,745</p>
+                    <div class="w-12 text-red-500 ltr:text-right rtl:text-left">
+                        3.1%
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-span-12 lg:col-span-6 order-[14] 2xl:order-1 card 2xl:col-span-3">
+        <div class="card-body">
+            <h6 class="mb-3 text-15">Subscription Distribution</h6>
+            <div id="subscriptionDistribution" class="apex-charts" dir="ltr">
+                <apx-chart [series]="subscriptionDistribution.series" [chart]="subscriptionDistribution.chart" [labels]="subscriptionDistribution.labels" [plotOptions]="subscriptionDistribution.plotOptions" [dataLabels]="subscriptionDistribution.dataLabels" [fill]="subscriptionDistribution.fill" [legend]="subscriptionDistribution.legend" [colors]="subscriptionDistribution.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div>
+    <div class="col-span-12 lg:col-span-6 order-[15] 2xl:order-1 card 2xl:col-span-3">
+        <div class="card-body">
+            <div class="flex items-center gap-4 mb-3">
+                <h6 class="text-15 grow">Traffic Source</h6>
+                <a href="javascript:void(0);" class="underline transition-all duration-200 ease-linear text-custom-500 hover:text-custom-700">See More</a>
+            </div>
+            <div class="flex flex-col gap-5">
+                <div>
+                    <div class="flex items-center justify-between gap-4 mb-2">
+                        <h6>Google</h6>
+                        <span class="text-slate-500 dark:text-zink-200">54,963</span>
+                    </div>
+                    <div class="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
+                        <div class="h-3.5 rounded bg-custom-500" style="width: 89%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between gap-4 mb-2">
+                        <h6>Social Media</h6>
+                        <span class="text-slate-500 dark:text-zink-200">54,963</span>
+                    </div>
+                    <div class="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
+                        <div class="h-3.5 rounded bg-yellow-500" style="width: 81%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between gap-4 mb-2">
+                        <h6>Direct Message</h6>
+                        <span class="text-slate-500 dark:text-zink-200">54,963</span>
+                    </div>
+                    <div class="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
+                        <div class="h-3.5 rounded bg-green-500" style="width: 63%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between gap-4 mb-2">
+                        <h6>Others</h6>
+                        <span class="text-slate-500 dark:text-zink-200">54,963</span>
+                    </div>
+                    <div class="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
+                        <div class="h-3.5 rounded bg-slate-500 dark:text-zink-500" style="width: 25%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<app-page-title [title]="'Scatter Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="basicScatter" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="basicScatterChart.series" [chart]="basicScatterChart.chart"
+                [xaxis]="basicScatterChart.xaxis" [yaxis]="basicScatterChart.yaxis"
+                [colors]="basicScatterChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Scatter – Datetime</h6>
+            <div id="scatterDatetime" class="apex-charts" dir="ltr">
+                <apx-chart [series]="dateTimeScatterChart.series" [chart]="dateTimeScatterChart.chart"
+                [xaxis]="dateTimeScatterChart.xaxis" [yaxis]="dateTimeScatterChart.yaxis"
+                [dataLabels]="dateTimeScatterChart.dataLabels" [grid]="dateTimeScatterChart.grid"
+                [colors]="dateTimeScatterChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Scatter – Images</h6>
+            <div id="scatterImages" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="ScatterImagesChart.series" [chart]="ScatterImagesChart.chart"
+                [xaxis]="ScatterImagesChart.xaxis" [yaxis]="ScatterImagesChart.yaxis"
+                [colors]="ScatterImagesChart.colors" [legend]="ScatterImagesChart.legend"
+                [markers]="ScatterImagesChart.markers" [fill]="ScatterImagesChart.fill" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

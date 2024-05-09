@@ -1,0 +1,36 @@
+<app-page-title [title]="'Color Picker'" [pagetitle]="'Forms'"></app-page-title>
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-3">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-1 text-gray-800 text-15 dark:text-white">Monolith Demo</h6>
+            <p class="mb-4">Use <code class="text-xs text-pink-500 select-all">[(colorPicker)]="componentcolor" [style.background]="componentcolor"</code> class to set monolith colorpicker.</p>
+            <input [style.background]="componentcolor" [cpPresetColors]="['#fff', '#000', '#2889e9', '#e920e9', '#fff500', 'rgb(236,64,64)']" [(colorPicker)]="componentcolor" id="monolith" />
+        </div>
+    </div><!--end card-->
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-1 text-gray-800 text-15 dark:text-white">Nano Demo</h6>
+            <p class="mb-4">Use <code class="text-xs text-pink-500 select-all"> [style.background]="Nano" [cpCancelButton]="true" [(colorPicker)]="Nano"</code> class to set nano colorpicker.</p>
+            <input [value]="Nano" [style.background]="Nano" [cpCancelButton]="true" [(colorPicker)]="Nano" id="monolith" />
+        </div>
+    </div><!--end card-->
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-1 text-gray-800 text-15 dark:text-white">Eye Dropper</h6>
+            <p class="mb-4">Use <code class="text-xs text-pink-500 select-all">colorpicker-demo</code> [value]="color" [style.background]="color" [cpEyeDropper]="true" [cpSaveClickOutside]="false" [cpOKButtonClass]="'btn btn-primary btn-xs'" class to set demo option colorpicker.</p>
+            <input [value]="dropper" [style.background]="dropper" [cpEyeDropper]="true" [cpSaveClickOutside]="false" [(colorPicker)]="dropper" id="monolith" />
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-1 text-gray-800 text-15 dark:text-white">Present color</h6>
+            <p class="mb-4">Use <code class="text-xs text-pink-500 select-all">Present color
+                    [style.background]="event" [cpAlphaChannel]="'always'" [cpOutputFormat]="'rgba'" [cpPresetColors]="['#fff', '#eb5435']" [cpAddColorButton]="true" [(colorPicker)]="event" </code>Add and remove preset colors</p>
+            <input [style.background]="event" [cpAlphaChannel]="'always'" [cpOutputFormat]="'rgba'" [cpPresetColors]="['#fff', '#eb5435']" [cpAddColorButton]="true" [(colorPicker)]="event" id="monolith" />
+            <!-- <div class="colorpicker-switch"></div> -->
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

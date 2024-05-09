@@ -1,0 +1,47 @@
+<app-page-title [title]="'Treemap  Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="basicTreemap" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="basicTreemapChart.series" [chart]="basicTreemapChart.chart"
+                 [legend]="basicTreemapChart.legend"
+                [colors]="basicTreemapChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Treemap Multiple Series</h6>
+            <div id="treemapMultipleSeries" class="apex-charts" dir="ltr">
+                <apx-chart [series]="MultiDimensionalChart.series" [chart]="MultiDimensionalChart.chart"
+                [title]="MultiDimensionalChart.title" [legend]="MultiDimensionalChart.legend"
+                 dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Color Range</h6>
+            <div id="colorRange" class="apex-charts" dir="ltr">
+                <apx-chart [series]="colorRangesChart.series" [chart]="colorRangesChart.chart"
+                [dataLabels]="colorRangesChart.dataLabels" [plotOptions]="colorRangesChart.plotOptions"
+                [title]="colorRangesChart.title" [legend]="colorRangesChart.legend" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Distributed Chart</h6>
+            <div id="distributedChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="distributedTreemapChart.series" 
+                [chart]="distributedTreemapChart.chart" [title]="distributedTreemapChart.title"
+                [colors]="distributedTreemapChart.colors" [plotOptions]="distributedTreemapChart.plotOptions"
+                dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

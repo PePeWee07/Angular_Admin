@@ -1,0 +1,55 @@
+<app-page-title [title]="'Lightbox'" [pagetitle]="'Plugins'"></app-page-title>
+
+<div>
+    <div class="grid grid-cols-1 gap-x-5 xl:grid-cols-1">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-4 text-15">Simple Image Gallery</h6>
+
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+                    @for( img of images; track $index){
+                    <div>
+                        <a class="glightbox">
+                            <img src="{{img.src}}" alt="" class="rounded-md" alt="image" (click)="open($index)">
+                        </a>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div><!--end card-->
+
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-4 text-15">Images with Description</h6>
+
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+                    @for( image of gallery; track $index){
+                    <div>
+                        <a class="description">
+                            <img [src]="image.thumb" (click)="openZoomGallery($index)" alt="image" class="rounded-md">
+                        </a>
+                    </div>}
+                </div>
+            </div>
+        </div><!--end card-->
+
+        <!-- <div class="card">
+            <div class="card-body">
+                <h6 class="mb-4 text-15">Videos Gallery</h6>
+
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+                    @for(data of video;track $index){
+                        <div>
+                            <a class="video">
+                                <img src="{{data.src}}" (click)="openVideoGallery($index)"  alt="image" class="object-cover w-full rounded-md h-30">
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div> -->
+        <!--end card-->
+
+
+    </div><!--end grid-->
+</div>

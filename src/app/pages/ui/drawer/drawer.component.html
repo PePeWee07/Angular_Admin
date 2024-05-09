@@ -1,0 +1,80 @@
+<app-page-title [title]="'Drawer'" [pagetitle]="'UI Elements'"></app-page-title>
+<div>
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Default</h6>
+            <div class="flex flex-wrap gap-2">
+                <button [DrawerTrigger]="'drawerEnd'" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">End Button</button>
+
+                <drawer id="drawerEnd" [position]="'drawer-end'">
+                    <div class="flex items-center justify-between p-4 border-b card-body border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Heading</h6>
+                        <button dismissDrawer [DrawerDismiss]="'drawerEnd'"><lucide-angular name="x" [class]="'size-4 transition-all duration-200 ease-linear text-slate-500 hover:text-slate-700 dark:text-zink-200 dark:hover:text-zink-50'"></lucide-angular></button>
+                    </div>
+                    <div class="h-full p-4 overflow-y-auto">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-15">Drawer Content</h6>
+                            <p class="text-slate-500 dark:text-zink-200">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 border-t border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Footer</h6>
+                    </div>
+                </drawer>
+
+                <button [DrawerTrigger]="'drawerStart'" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Start Drawer</button>
+
+                <drawer id="drawerStart" [position]="'drawer-start'">
+                    <div class="flex items-center justify-between p-4 border-b card-body border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Heading</h6>
+                        <button data-drawer-close="drawerEnd"><lucide-angular name="x" [class]="'size-4 transition-all duration-200 ease-linear text-slate-500 hover:text-slate-700 dark:text-zink-200 dark:hover:text-zink-50'"></lucide-angular></button>
+                    </div>
+                    <div class="h-full p-4 overflow-y-auto">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-15">Drawer Content</h6>
+                            <p class="text-slate-500 dark:text-zink-200">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 border-t border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Footer</h6>
+                    </div>
+                </drawer>
+
+                <button [DrawerTrigger]="'drawerBottom'" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Bottom Drawer</button>
+                <drawer id="drawerBottom" [position]="'drawer-bottom'">
+                    <div class="flex items-center justify-between p-4 border-b card-body border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Heading</h6>
+                        <button dismissDrawer [DrawerDismiss]="'drawerBottom'"><lucide-angular name="x" [class]="'size-4 transition-all duration-200 ease-linear text-slate-500 hover:text-slate-700 dark:text-zink-200 dark:hover:text-zink-50'"></lucide-angular></button>
+                    </div>
+                    <div class="h-full p-4 overflow-y-auto">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-15">Drawer Content</h6>
+                            <p class="text-slate-500 dark:text-zink-200">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 border-t border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Footer</h6>
+                    </div>
+                </drawer>
+
+                <button [DrawerTrigger]="'drawerTop'" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Top Drawer</button>
+                <drawer id="drawerTop" [position]="'drawer-top'">
+                    <div class="flex items-center justify-between p-4 border-b card-body border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Heading</h6>
+                        <button dismissDrawer [DrawerDismiss]="'drawerTop'"><lucide-angular name="x" [class]="'size-4 transition-all duration-200 ease-linear text-slate-500 hover:text-slate-700 dark:text-zink-200 dark:hover:text-zink-50'"></lucide-angular></button>
+                    </div>
+                    <div class="h-full p-4 overflow-y-auto">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-15">Drawer Content</h6>
+                            <p class="text-slate-500 dark:text-zink-200">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 border-t border-slate-200 dark:border-zink-500">
+                        <h6 class="text-15">Drawer Footer</h6>
+                    </div>
+                </drawer>
+            </div>
+        </div>
+    </div><!--end card-->
+
+</div>

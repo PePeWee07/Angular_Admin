@@ -1,0 +1,14 @@
+<app-page-title [title]="'Balloon Editor'" [pagetitle]="'Forms'"></app-page-title>
+
+
+<div class="px-4 py-3 mb-4 text-sm text-red-500 border border-transparent rounded-md bg-red-50 dark:bg-red-400/20">
+    Notes: <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-editor.html" class="font-medium underline">https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-editor.html</a> more details
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="mb-4 text-15">Balloon Ckeditor</h6>
+        <ckeditor [editor]="balloonEditor " [(ngModel)]="editorData" data="" class="ckeditor-balloon">
+        </ckeditor>
+    </div>
+</div><!--end card-->

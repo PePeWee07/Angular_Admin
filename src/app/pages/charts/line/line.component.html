@@ -1,0 +1,123 @@
+<app-page-title [title]="'Line  Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="chartLine" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="basicLineChart.series" [chart]="basicLineChart.chart"
+                    [markers]="basicLineChart.markers" [dataLabels]="basicLineChart.dataLabels"
+                    [stroke]="basicLineChart.stroke" [colors]="basicLineChart.colors" [title]="basicLineChart.title"
+                    [xaxis]="basicLineChart.xaxis" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Line with Data Labels</h6>
+            <div id="lineWithDataLabel" class="apex-charts"
+                dir="ltr">
+                <apx-chart [series]="lineWithDataLabelsChart.series" [chart]="lineWithDataLabelsChart.chart"
+                    [xaxis]="lineWithDataLabelsChart.xaxis" [stroke]="lineWithDataLabelsChart.stroke"
+                    [colors]="lineWithDataLabelsChart.colors" [dataLabels]="lineWithDataLabelsChart.dataLabels"
+                    [legend]="lineWithDataLabelsChart.legend" [markers]="lineWithDataLabelsChart.markers"
+                    [yaxis]="lineWithDataLabelsChart.yaxis" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Zoomable Timeseries</h6>
+            <div id="zoomableTimeseries" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="zoomableTimeseriesChart.series" [chart]="zoomableTimeseriesChart.chart"
+                    [markers]="zoomableTimeseriesChart.markers" [yaxis]="zoomableTimeseriesChart.yaxis"
+                    [tooltip]="zoomableTimeseriesChart.tooltip" [dataLabels]="zoomableTimeseriesChart.dataLabels"
+                    [colors]="zoomableTimeseriesChart.colors" [title]="zoomableTimeseriesChart.title"
+                    [xaxis]="zoomableTimeseriesChart.xaxis" [colors]="zoomableTimeseriesChart.colors"
+                    [fill]="zoomableTimeseriesChart.fill" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Line Chart with Annotations</h6>
+            <div id="lineWithAnnotations" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="lineAnnotationsChart.series" [chart]="lineAnnotationsChart.chart"
+                    [xaxis]="lineAnnotationsChart.xaxis" [dataLabels]="lineAnnotationsChart.dataLabels"
+                    [grid]="lineAnnotationsChart.grid" [stroke]="lineAnnotationsChart.stroke"
+                    [title]="lineAnnotationsChart.title" [labels]="lineAnnotationsChart.labels"
+                    [annotations]="lineAnnotationsChart.annotations" [colors]="lineAnnotationsChart.colors"
+                    dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Brush Chart</h6>
+            <div>
+                <div id="brushChartLine" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="brushLineChart.series" [chart]="brushLineChart.chart"
+                        [xaxis]="brushLineChart.xaxis" [dataLabels]="brushLineChart.dataLabels"
+                        [colors]="brushLineChart.colors" [fill]="brushLineChart.fill" [markers]="brushLineChart.markers"
+                        [stroke]="brushLineChart.stroke"></apx-chart>
+                </div>
+                <div id="brushChartLine2" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="brushAreaChart.series" [chart]="brushAreaChart.chart"
+                        [xaxis]="brushAreaChart.xaxis" [colors]="brushAreaChart.colors" [fill]="brushAreaChart.fill"
+                        [yaxis]="brushAreaChart.yaxis" dir="ltr"></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Stepline</h6>
+            <div id="chartStepline" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="stepLineChart.series" [chart]="stepLineChart.chart"
+                    [markers]="stepLineChart.markers" [stroke]="stepLineChart.stroke"
+                    [dataLabels]="stepLineChart.dataLabels" [title]="stepLineChart.title"
+                    [colors]="stepLineChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Gradient Charts</h6>
+            <div id="gradientCharts" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="gradientChart.series" [chart]="gradientChart.chart" [xaxis]="gradientChart.xaxis"
+                    [forecastDataPoints]="gradientChart.forecastDataPoints" [colors]="gradientChart.colors"
+                    [fill]="gradientChart.fill" [title]="gradientChart.title" [yaxis]="gradientChart.yaxis" dir="ltr">
+                </apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Missing / Null Values</h6>
+            <div id="missingCharts" class="apex-charts"
+                dir="ltr">
+                <apx-chart [series]="missingDataChart.series" [chart]="missingDataChart.chart"
+                    [xaxis]="missingDataChart.xaxis" [stroke]="missingDataChart.stroke"
+                    [labels]="missingDataChart.labels" [title]="missingDataChart.title"
+                    [colors]="missingDataChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Dashed Charts</h6>
+            <div id="dashedCharts" class="apex-charts"
+               dir="ltr">
+                <apx-chart [series]="dashedLineChart.series" [chart]="dashedLineChart.chart"
+                    [colors]="dashedLineChart.colors" [dataLabels]="dashedLineChart.dataLabels"
+                    [stroke]="dashedLineChart.stroke" [series]="dashedLineChart.series" [title]="dashedLineChart.title"
+                    [markers]="dashedLineChart.markers" [xaxis]="dashedLineChart.xaxis"
+                    [tooltip]="dashedLineChart.tooltip" [grid]="dashedLineChart.grid" [legend]="dashedLineChart.legend"
+                    dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+
+</div><!--end grid-->

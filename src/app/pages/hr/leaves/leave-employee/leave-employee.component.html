@@ -1,0 +1,103 @@
+<app-page-title [title]="'Leave Manage (Employee)'" [pagetitle]="'Leaves Manage'"></app-page-title>
+
+<div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-12">
+    <div class="xl:col-span-3">
+        <div class="card">
+            <div class="flex items-center gap-3 card-body">
+                <div class="flex items-center justify-center size-12 text-red-500 bg-red-100 rounded-md text-15 dark:bg-red-500/20 shrink-0"><lucide-angular name="file-bar-chart-2"></lucide-angular></div>
+                <div class="grow">
+                    <h5 class="mb-1 text-16"><span class="counter-value" [countUp]="23">0</span></h5>
+                    <p class="text-slate-500 dark:text-zink-200">Total Leave Balance</p>
+                </div>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="xl:col-span-3">
+        <div class="card">
+            <div class="flex items-center gap-3 card-body">
+                <div class="flex items-center justify-center size-12 text-green-500 bg-green-100 rounded-md text-15 dark:bg-green-500/20 shrink-0"><lucide-angular name="calendar-days"></lucide-angular></div>
+                <div class="grow">
+                    <h5 class="mb-1 text-16"><span class="counter-value" [countUp]="12">0</span></h5>
+                    <p class="text-slate-500 dark:text-zink-200">Annual Leave</p>
+                </div>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="xl:col-span-3">
+        <div class="card">
+            <div class="flex items-center gap-3 card-body">
+                <div class="flex items-center justify-center size-12 text-purple-500 bg-purple-100 rounded-md text-15 dark:bg-purple-500/20 shrink-0"><lucide-angular name="stethoscope"></lucide-angular></div>
+                <div class="grow">
+                    <h5 class="mb-1 text-16"><span class="counter-value" [countUp]="4">0</span></h5>
+                    <p class="text-slate-500 dark:text-zink-200">Medical Leave</p>
+                </div>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="xl:col-span-3">
+        <div class="card">
+            <div class="flex items-center gap-3 card-body">
+                <div class="flex items-center justify-center size-12 rounded-md text-sky-500 bg-sky-100 text-15 dark:bg-sky-500/20 shrink-0"><lucide-angular name="anchor"></lucide-angular></div>
+                <div class="grow">
+                    <h5 class="mb-1 text-16"><span class="counter-value" [countUp]="11">0</span></h5>
+                    <p class="text-slate-500 dark:text-zink-200">Remaining Leave</p>
+                </div>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end grid-->
+
+<div class="card" id="ordersTable">
+    <div class="card-body">
+        <div class="grid grid-cols-1 gap-4 mb-5 lg:grid-cols-2 xl:grid-cols-12">
+            <div class="xl:col-span-3">
+                <div class="relative">
+                    <input type="text" class="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search for ..." autocomplete="off">
+                    <lucide-angular name="search" [class]="'inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zink-200 fill-slate-100 dark:fill-zink-600'"></lucide-angular>
+                </div>
+            </div><!--end col-->
+            <div class="xl:col-span-2 xl:col-start-11">
+                <div class="ltr:lg:text-right rtl:lg:text-left">
+                    <a routerLink="/hr-create-leave" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20"><lucide-angular name="plus" class="inline-block size-4"></lucide-angular> <span class="align-middle">Add Leave</span></a>
+                </div>
+            </div>
+        </div><!--col grid-->
+        <div class="overflow-x-auto">
+            <div class="overflow-x-auto">
+
+                <ngx-datatable [rows]="leaves " [rows]="leaves" class="material w-full whitespace-nowrap" [loadingIndicator]="true" [columnMode]="'force'" [limit]="10" [sorts]="[{ prop: 'productName', dir: 'desc' }]" [headerHeight]="42" [footerHeight]="50" [rowHeight]="'auto'" [columns]="columns">
+                    <ngx-datatable-column *ngFor="let column of columns; let i = index;" name="{{column.name}}" prop="{{column.prop}}" [width]="column.prop == 'day' ? 200 : (column.prop == 'holidayName' ? 330 : (column.prop == 'type' ? 300 : 100))" headerClass="ltr:text-left rtl:text-right bg-slate-100 text-slate-500 dark:bg-zink-600 dark:text-zink-200 px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500" cellClass="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">
+                        <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                            @if(column.prop === 'status'){
+                            <span class="px-2.5 py-0.5 inline-block text-xs font-medium rounded border border-transparent dark:border-transparent" [ngClass]="{'bg-green-100 text-green-500 dark:bg-green-500/20':value == 'Approved',
+                                'bg-red-100 text-red-500 dark:bg-red-500/20':value == 'Declined',
+                                'bg-yellow-100 text-yellow-500 dark:bg-yellow-500/20':value == 'Pending'}">{{value}}</span>
+                            }@else if(column.prop === 'actions') {
+                            <div class="flex justify-end gap-2">
+                                @if(row.status == 'Pending'){
+                                <a href="javascript:void(0);" class="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md text-slate-500 bg-slate-100 hover:text-white hover:bg-slate-500 dark:text-zink-200 dark:bg-zink-600 dark:hover:text-white dark:hover:bg-zink-400"><lucide-angular name="pencil" [class]="'size-4'"></lucide-angular></a>
+                                }
+                                <a href="javascript:void(0);" data-modal-target="leaveOverviewModal" class="flex items-center justify-center size-8 transition-all duration-200 ease-linear rounded-md text-custom-500 bg-custom-100 hover:text-white hover:bg-custom-500 dark:bg-custom-500/20 dark:hover:bg-custom-500"><lucide-angular name="info" [class]="'size-4'"></lucide-angular></a>
+                            </div>
+                            }@else {
+                            {{ value }}
+                            }
+                        </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-footer>
+                        <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize" let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+                            <div class="grow">
+                                <p class="text-slate-500 dark:text-zink-200">Showing <b>{{getEndIndex()}}</b> of <b>{{ totalItems }}</b> Results</p>
+                            </div>
+                            @if(totalItems > 0){
+                            <pagination-controls [currentPage]="currentPage" [boundryLinks]="false" previousLabel="Prev" nextLabel="Next" [itemsPerPage]="itemsPerPage" [total]="totalItems" (pageChanged)="onPageChange($event)">
+
+                            </pagination-controls>
+                            }
+                        </ng-template>
+                    </ngx-datatable-footer>
+                </ngx-datatable>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<app-page-title [title]="'Leaflet'" [pagetitle]="'Maps'"></app-page-title>
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Example</h6>
+            <div id="leaflet-map" class="leaflet-map" leaflet [leafletOptions]="options"></div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Markers, Circles and Polygons</h6>
+            <div id="leaflet-map-marker" class="leaflet-map" leaflet [leafletOptions]="markers" [leafletLayers]="markersLayers"></div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Working with Popups</h6>
+            <div id="leaflet-map-popup" class="leaflet-map" leaflet [leafletOptions]="popups" [leafletLayers]="popupLayers"></div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Markers with Custom Icons</h6>
+            <div id="leaflet-map-custom-icons" class="leaflet-map" leaflet [leafletOptions]="custom" [leafletLayers]="customLayers"></div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Interactive Choropleth Map</h6>
+            <div id="leaflet-map-interactive-map" class="leaflet-map" leaflet [leafletOptions]="choropleth" [leafletLayers]="choroplethLayers"></div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Layer Groups and Layers Control</h6>
+            <div id="leaflet-map-group-control" class="leaflet-map" leaflet [leafletOptions]="groups" [leafletLayers]="GroupsLayers"></div>
+        </div>
+    </div><!--end card-->
+</div>

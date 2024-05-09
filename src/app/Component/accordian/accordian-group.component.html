@@ -1,0 +1,13 @@
+
+<div [ngClass]="{'active': expanded}">
+    <div (click)="toggleAccordion($event)">
+        <button class="flex items-center justify-between w-full p-3 font-medium text-left border-b border-gray-100 rounded-t-lg accordion-header group active dark:border-b-zinc-600" *ngIf="heading" type="button">
+            {{ heading }}
+            <i class="mdi mdi-chevron-down text-2xl group-[.active]:rotate-180"></i>
+        </button>
+        <ng-content select="[md-accordion-heading]" ></ng-content>
+    </div>
+    <div *ngIf="expanded">
+        <ng-content></ng-content>
+    </div>
+</div>

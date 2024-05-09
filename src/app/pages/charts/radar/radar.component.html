@@ -1,0 +1,40 @@
+<app-page-title [title]="'Pie / Donut Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="basicRadar" class="apex-charts" dir="ltr">
+                <apx-chart [series]="basicRadarChart.series" [chart]="basicRadarChart.chart"
+                [xaxis]="basicRadarChart.xaxis" [colors]="basicRadarChart.colors"
+                dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Radar – Multiple Series</h6>
+            <div id="radarMultipleSeries" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="multipleSeriesChart.series" [chart]="multipleSeriesChart.chart"
+                    [stroke]="multipleSeriesChart.stroke" [fill]="multipleSeriesChart.fill"
+                    [markers]="multipleSeriesChart.markers" [colors]="multipleSeriesChart.colors"
+                    [xaxis]="multipleSeriesChart.xaxis" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Radar with Polygon-fill</h6>
+            <div id="radarWithPolygonfill" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="polygonFillChart.series" [chart]="polygonFillChart.chart"
+                [xaxis]="polygonFillChart.xaxis" [stroke]="polygonFillChart.stroke"
+                [colors]="polygonFillChart.colors" [dataLabels]="polygonFillChart.dataLabels"
+                [tooltip]="polygonFillChart.tooltip" [plotOptions]="polygonFillChart.plotOptions"
+                [markers]="polygonFillChart.markers" [yaxis]="polygonFillChart.yaxis" 
+                 dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

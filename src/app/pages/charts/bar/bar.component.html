@@ -1,0 +1,94 @@
+<app-page-title [title]="'Bar Charts'" [pagetitle]="'Apexcharts'" ></app-page-title>
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic</h6>
+            <div id="basicBar" class="apex-charts" data-chart-colors='["bg-custom-500"]' dir="ltr">
+            <apx-chart [series]="basicBarChart.series" [chart]="basicBarChart.chart" [dataLabels]="basicBarChart.dataLabels" [plotOptions]="basicBarChart.plotOptions" [xaxis]="basicBarChart.xaxis" [colors]="basicBarChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Grouped Chart</h6>
+            <div id="GroupedChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-green-500"]' dir="ltr">
+            <apx-chart [series]="groupedBarChart.series" [tooltip]="groupedBarChart.tooltip" [chart]="groupedBarChart.chart" [dataLabels]="groupedBarChart.dataLabels" [plotOptions]="groupedBarChart.plotOptions" [xaxis]="groupedBarChart.xaxis" [stroke]="groupedBarChart.stroke" [colors]="groupedBarChart.colors" dir="ltr"></apx-chart>
+        </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Stacked Bar</h6>
+            <div id="stackedChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-green-500", "bg-orange-500", "bg-yellow-500", "bg-purple-500", "bg-red-500"]' dir="ltr">
+            <apx-chart [series]="stackedBarChart.series" [chart]="stackedBarChart.chart" [dataLabels]="stackedBarChart.dataLabels" [plotOptions]="stackedBarChart.plotOptions" [xaxis]="stackedBarChart.xaxis" [stroke]="stackedBarChart.stroke" [fill]="stackedBarChart.fill" [yaxis]="stackedBarChart.yaxis" [title]="stackedBarChart.title" [tooltip]="stackedBarChart.tooltip" [legend]="stackedBarChart.legend" [colors]="stackedBarChart.colors" dir="ltr"></apx-chart>
+        </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Stacked Bars 100</h6>
+            <div id="stackedBar100Chart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-green-500", "bg-orange-500", "bg-yellow-500", "bg-purple-500", "bg-red-500"]' dir="ltr">
+            <apx-chart [series]="stacked100BarChart.series" [chart]="stacked100BarChart.chart" [plotOptions]="stacked100BarChart.plotOptions" [xaxis]="stacked100BarChart.xaxis" [stroke]="stacked100BarChart.stroke" [fill]="stacked100BarChart.fill" [title]="stacked100BarChart.title" [tooltip]="stacked100BarChart.tooltip" [legend]="stacked100BarChart.legend" [colors]="stacked100BarChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Grouped Stacked Bars</h6>
+            <div id="groupedStackedChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-green-500", "bg-custom-300", "bg-green-300"]' dir="ltr">
+                <apx-chart [series]="groupedStackedChart.series" [chart]="groupedStackedChart.chart" [stroke]="groupedStackedChart.stroke" [dataLabels]="groupedStackedChart.dataLabels" [plotOptions]="groupedStackedChart.plotOptions" [xaxis]="groupedStackedChart.xaxis" [fill]="groupedStackedChart.fill" [colors]="groupedStackedChart.colors" [legend]="groupedStackedChart.legend" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Bar with Negative Values</h6>
+            <div id="negativeValuesChart" class="apex-charts" data-chart-colors='["bg-red-500", "bg-sky-500"]' dir="ltr">
+                <apx-chart [series]="barWithNegativeChart.series" [chart]="barWithNegativeChart.chart" [dataLabels]="barWithNegativeChart.dataLabels" [stroke]="barWithNegativeChart.stroke" [colors]="barWithNegativeChart.colors" [title]="barWithNegativeChart.title" [grid]="barWithNegativeChart.grid" [tooltip]="barWithNegativeChart.tooltip" [plotOptions]="barWithNegativeChart.plotOptions" [yaxis]="barWithNegativeChart.yaxis" [xaxis]="barWithNegativeChart.xaxis" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Bar with Markers</h6>
+            <div id="markersChart" class="apex-charts" data-chart-colors='["bg-green-500"]' dir="ltr">
+                <apx-chart [series]="barWithMarkersChart.series" [chart]="barWithMarkersChart.chart" [legend]="barWithMarkersChart.legend" [dataLabels]="barWithMarkersChart.dataLabels" [colors]="barWithMarkersChart.colors" [plotOptions]="barWithMarkersChart.plotOptions" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Reversed Bar Chart</h6>
+            <div id="reversedBarChart" class="apex-charts" data-chart-colors='["bg-custom-500"]' dir="ltr">
+                <apx-chart [series]="reversedBarChart.series" [chart]="reversedBarChart.chart" [dataLabels]="reversedBarChart.dataLabels" [plotOptions]="reversedBarChart.plotOptions" [xaxis]="reversedBarChart.xaxis" [yaxis]="reversedBarChart.yaxis" [annotations]="reversedBarChart.annotations" [colors]="reversedBarChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Custom DataLabels Bar</h6>
+            <div id="customDataLabelsChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-sky-500", "bg-yellow-500", "bg-red-500", "bg-purple-500", "bg-slate-300", "bg-slate-800", "bg-emerald-500"]' dir="ltr">
+                <apx-chart [series]="customDataLabelsChart.series" [chart]="customDataLabelsChart.chart" [dataLabels]="customDataLabelsChart.dataLabels" [plotOptions]="customDataLabelsChart.plotOptions" [xaxis]="customDataLabelsChart.xaxis" [yaxis]="customDataLabelsChart.yaxis" [stroke]="customDataLabelsChart.stroke" [colors]="customDataLabelsChart.colors" [title]="customDataLabelsChart.title" [subtitle]="customDataLabelsChart.subtitle" [tooltip]="customDataLabelsChart.tooltip" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Patterned Bar</h6>
+            <div id="patternedChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-green-500", "bg-orange-500", "bg-yellow-500"]' dir="ltr">
+                <apx-chart [series]="patternedChart.series" [chart]="patternedChart.chart" [stroke]="patternedChart.stroke" [dataLabels]="patternedChart.dataLabels" [colors]="patternedChart.colors" [plotOptions]="patternedChart.plotOptions" [title]="patternedChart.title" [xaxis]="patternedChart.xaxis" [yaxis]="patternedChart.yaxis" [tooltip]="patternedChart.tooltip" [fill]="patternedChart.fill" [states]="patternedChart.states" [legend]="patternedChart.legend" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Bar with Images</h6>
+            <div id="barWithImagesChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="barWithImageChart.series" [chart]="barWithImageChart.chart" [stroke]="barWithImageChart.stroke" [dataLabels]="barWithImageChart.dataLabels" [plotOptions]="barWithImageChart.plotOptions" [labels]="barWithImageChart.labels" [yaxis]="barWithImageChart.yaxis" [grid]="barWithImageChart.grid" [title]="barWithImageChart.title" [fill]="barWithImageChart.fill" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->
+

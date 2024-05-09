@@ -1,0 +1,27 @@
+<app-page-title [title]="'Pie / Donut Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Basic Range Area</h6>
+            <div id="basicRangeArea" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="rangearea.series" [chart]="rangearea.chart" [stroke]="rangearea.stroke"
+                [markers]="rangearea.markers" [colors]="rangearea.colors" [dataLabels]="rangearea.dataLabels"
+                [yaxis]="rangearea.yaxis"  dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Combo Range Area</h6>
+            <div id="comboRangeAreaChart" class="apex-charts"  dir="ltr">
+                <apx-chart [series]="Combo.series" [chart]="Combo.chart" 
+                [colors]="Combo.colors" [dataLabels]="Combo.dataLabels" [title]="Combo.title"
+                [stroke]="Combo.stroke" [fill]="Combo.fill" [legend]="Combo.legend" [markers]="Combo.markers"
+                [forecastDataPoints]="Combo.forecastDataPoints" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

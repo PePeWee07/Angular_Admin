@@ -1,0 +1,79 @@
+<app-page-title [title]="'Pie / Donut Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Simple Radialbar Chart</h6>
+            <div id="simpleRadialbarChart" class="apex-charts" data-chart-colors='["bg-custom-500"]' dir="ltr">
+                <apx-chart [series]="basicRadialbarChart.series" [chart]="basicRadialbarChart.chart"
+                [plotOptions]="basicRadialbarChart.plotOptions" [labels]="basicRadialbarChart.labels"
+                [colors]="basicRadialbarChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Multiple Radialbar</h6>
+            <div id="multipleRadialbarChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500"]' dir="ltr">
+                <apx-chart [series]="multipleRadialbarChart.series" [chart]="multipleRadialbarChart.chart"
+                [plotOptions]="multipleRadialbarChart.plotOptions" [labels]="multipleRadialbarChart.labels"
+                [colors]="multipleRadialbarChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Custom Angle Circle</h6>
+            <div id="customAngleCircleChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-sky-500", "bg-green-500", "bg-purple-500"]' dir="ltr">
+                <apx-chart [series]="customAngleChart.series" [chart]="customAngleChart.chart"
+                [plotOptions]="customAngleChart.plotOptions" [labels]="customAngleChart.labels"
+                [legend]="customAngleChart.legend" [colors]="customAngleChart.colors"
+                [responsive]="customAngleChart.responsive" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Gradient</h6>
+            <div id="gradientChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-green-400"]' dir="ltr">
+                <apx-chart [series]="gradientCircleChart.series" [chart]="gradientCircleChart.chart"
+                [plotOptions]="gradientCircleChart.plotOptions" [labels]="gradientCircleChart.labels"
+                [stroke]="gradientCircleChart.stroke" [fill]="gradientCircleChart.fill" [colors]="gradientCircleChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Radialbar with Image</h6>
+            <div id="radialbarsWithImageChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="radialbarsWithImageChart.series" [chart]="radialbarsWithImageChart.chart"
+                [plotOptions]="radialbarsWithImageChart.plotOptions" [fill]="radialbarsWithImageChart.fill"
+                [stroke]="radialbarsWithImageChart.stroke" [labels]="radialbarsWithImageChart.labels" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Stroked Gauge</h6>
+            <div id="strokedGauge" class="apex-charts" data-chart-colors='["bg-purple-500"]' dir="ltr">
+                <apx-chart [series]="strokedCircleChart.series" [chart]="strokedCircleChart.chart"
+                [plotOptions]="strokedCircleChart.plotOptions" [labels]="strokedCircleChart.labels"
+                [fill]="strokedCircleChart.fill" [stroke]="strokedCircleChart.stroke"
+                [colors]="strokedCircleChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Semi Circle Gauge</h6>
+            <div id="semiCircleGauge" class="apex-charts" data-chart-colors='["bg-custom-500"]' dir="ltr">
+                <apx-chart [series]="semiCircleChart.series" [chart]="semiCircleChart.chart"
+                [plotOptions]="semiCircleChart.plotOptions" [grid]="semiCircleChart.grid"
+                [fill]="semiCircleChart.fill" [labels]="semiCircleChart.labels" [colors]="semiCircleChart.colors"
+                dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->

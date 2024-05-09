@@ -1,0 +1,66 @@
+.ng-select {
+    .ng-select-container {
+       @apply bg-white dark:bg-zink-700 border-slate-200 dark:border-zink-500;
+ 
+       .ng-placeholder {
+          @apply text-slate-500 dark:text-zink-200 #{!important};
+       }
+ 
+       .ng-value-label {
+          @apply text-slate-500 dark:text-zink-200 #{!important};
+       }
+    }
+ }
+ 
+ .ng-dropdown-panel {
+    @apply border-slate-200 dark:border-zink-500 #{!important};
+ 
+    .ng-dropdown-panel-items {
+       .ng-option {
+          @apply bg-white dark:bg-zink-700 border-slate-200 text-slate-500 dark:text-zink-200 dark:border-zink-500;
+ 
+          &.ng-option-marked {
+             @apply text-slate-700 dark:text-zink-50 #{!important};
+          }
+       }
+    }
+ }
+ 
+ .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+ .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
+    @apply text-slate-700 dark:text-zink-50 bg-white dark:bg-zink-700 #{!important};
+ }
+ 
+ .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-input>input {
+    @apply text-slate-700 dark:text-zink-50 #{!important};
+ }
+ 
+ .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    @apply bg-slate-100 dark:bg-zink-600 #{!important};
+ }
+ 
+ .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup {
+    @apply bg-slate-100 dark:bg-zink-600 text-current #{!important};
+ }
+ 
+ 
+ .ng-select.ng-select-opened>.ng-select-container {
+    @apply bg-white dark:bg-zink-700 border-slate-200 dark:border-zink-500 #{!important};
+ }
+ 
+ .ng-select.ng-select-disabled>.ng-select-container {
+    @apply bg-slate-100 dark:bg-zink-600 #{!important};
+ }
+ 
+ 
+ .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+    @apply bg-custom-500 text-white border-custom-500 #{!important};
+ 
+    .ng-value-label {
+       @apply bg-custom-500 text-white border-custom-500 #{!important};
+    }
+ }
+ 
+ .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon:hover {
+    @apply bg-custom-500 #{!important};
+ }

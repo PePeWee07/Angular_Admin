@@ -1,0 +1,19 @@
+.form-wizard {
+    .step.active {
+        a {
+            @apply bg-custom-500 text-custom-100;
+        }
+    }
+}
+
+
+#monolith {
+    @apply rounded-md w-full h-20;
+}
+
+// apex chart
+.apex-charts {
+    div {
+        @apply min-h-0 #{!important};
+    }
+}

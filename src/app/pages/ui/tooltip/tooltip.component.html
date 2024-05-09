@@ -1,0 +1,55 @@
+<app-page-title [title]="'Tooltip'" [pagetitle]="'UI Elements'"></app-page-title>
+
+<div>
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Default</h6>
+            <button data-tooltip="default" tooltip="test tooltip" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Default Tooltips</button>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Placements</h6>
+
+            <div class="flex flex-wrap items-center gap-2">
+                <button data-tooltip="default" tooltip="Default Tooltips" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Default</button>
+                <!-- <button data-tooltip="default" placement="top-start" data-tooltip-arrow="false" tooltip="Top Start" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Top Start</button> -->
+                <!-- <button data-tooltip="default" placement="top-end" data-tooltip-arrow="false" tooltip="Top End" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Top End</button> -->
+                <button data-tooltip="default" placement="bottom" tooltip="Bottom" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Bottom</button>
+                <!-- <button data-tooltip="default" placement="bottom-start" tooltip="bottom Start" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Bottom Start</button> -->
+                <!-- <button data-tooltip="default" placement="bottom-end" tooltip="Right End" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Bottom Right End</button> -->
+                <button data-tooltip="default" placement="right" tooltip="Right" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Right</button>
+                <!-- <button data-tooltip="default" placement="right-start" tooltip="Right Start" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Right Start</button> -->
+                <!-- <button data-tooltip="default" placement="right-end" tooltip="Right End" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Right End</button> -->
+                <button data-tooltip="default" placement="left" tooltip="Left" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Left</button>
+                <!-- <button data-tooltip="default" placement="left-start" tooltip="Left Start" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Left Start</button> -->
+                <!-- <button data-tooltip="default" placement="left-end" tooltip="Left End" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Left End</button> -->
+            </div>
+        </div>
+    </div><!--end card-->
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Triggers Tooltip</h6>
+
+            <div class="flex flex-wrap items-center gap-2">
+                <button data-tooltip="default" tooltip="Click Tooltip" trigger="click" data-tooltip-trigger="click" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Click Tooltips</button>
+                <button data-tooltip="default" tooltip="Focus Tooltips" trigger="click" data-tooltip-trigger="focus" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Focus Tooltips</button>
+            </div>
+        </div>
+    </div><!--end card-->
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-gray-800 text-15 dark:text-white">Follow Cursor</h6>
+
+            <div class="flex flex-wrap items-center gap-2">
+                <button data-tooltip="default" tooltip="Follow Cursor" data-tooltip-follow-cursor="true" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Follow Cursor</button>
+                <button data-tooltip="default" tooltip="Horizontal" data-tooltip-follow-cursor="horizontal" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Horizontal</button>
+                <button data-tooltip="default" tooltip="Vertical" data-tooltip-follow-cursor="vertical" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Vertical</button>
+                <button data-tooltip="default" tooltip="Initial" data-tooltip-follow-cursor="initial" type="button" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Initial</button>
+            </div>
+        </div>
+    </div><!--end card-->
+
+</div>

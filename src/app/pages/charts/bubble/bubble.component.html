@@ -1,0 +1,28 @@
+<app-page-title [title]="'Bubble  Charts'" [pagetitle]="'Apexcharts'"></app-page-title>
+
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">Simple</h6>
+            <div id="simpleChart" class="apex-charts" dir="ltr">
+                <apx-chart [series]="simpleBubbleChart.series" [chart]="simpleBubbleChart.chart"
+                    [dataLabels]="simpleBubbleChart.dataLabels" [fill]="simpleBubbleChart.fill"
+                    [xaxis]="simpleBubbleChart.xaxis" [yaxis]="simpleBubbleChart.yaxis"
+                    [colors]="simpleBubbleChart.colors" dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+    <div class="card">
+        <div class="card-body">
+            <h6 class="mb-4 text-15">3D Bubble</h6>
+            <div id="bubble_chart" class="apex-charts"
+                data-chart-colors='["bg-sky-500", "bg-yellow-500", "bg-red-500", "bg-purple-500"]' dir="ltr">
+                <apx-chart [series]="BubbleChart.series" [chart]="BubbleChart.chart"
+                    [dataLabels]="BubbleChart.dataLabels" [fill]="BubbleChart.fill" [xaxis]="BubbleChart.xaxis"
+                    [yaxis]="BubbleChart.yaxis" [theme]="BubbleChart.theme" [colors]="BubbleChart.colors"
+                    dir="ltr"></apx-chart>
+            </div>
+        </div>
+    </div><!--end card-->
+</div><!--end grid-->
